@@ -1,0 +1,23 @@
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[user]
+	name = dpree
+	email = whiterabbit.init@gmail.com
+[core]
+	autocrlf = input
+	editor = mate -w
+[apply]
+	whitespace = nowarn
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
