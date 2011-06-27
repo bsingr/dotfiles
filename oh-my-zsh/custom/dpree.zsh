@@ -42,9 +42,3 @@ export SVN_EDITOR=/usr/bin/vim
 #
 
 export TM_SOFT_TABS=YES
-
-#
-# NodeJS
-#
-
-NODE_PATH=$HOME/.node_libraries; export NODE_PATH
