@@ -9,8 +9,12 @@ export PATH="/usr/local/narwhal/bin:$PATH"
 CDPATH=$HOME:$HOME/dev; export CDPATH
 
 #
-# Ruby
+# Ruby RVM
 #
+
+# rvm-with-zsh fix
+# see http://beginrescueend.com/integration/zsh/
+unsetopt auto_name_dirs
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session
 
