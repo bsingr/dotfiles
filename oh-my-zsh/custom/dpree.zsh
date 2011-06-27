@@ -22,8 +22,9 @@ unsetopt auto_name_dirs
 # original ruby with:
 # rvm system
 # set default
-# rvm --default use ruby-1.9.2
-rvm ruby-1.9.2
+# rvm --default use ruby-1.9.2-p136
+#rvm ruby-1.9.2-p136
+rvm ruby-1.8.7
 
 #
 # Cappuccino
