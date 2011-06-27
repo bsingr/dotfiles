@@ -5,6 +5,7 @@
 export PATH="/opt/godi/bin:/opt/godi/sbin:$PATH"
 export PATH="/opt/local/bin:$PATH"
 export PATH="/usr/local/narwhal/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 CDPATH=$HOME:$HOME/dev; export CDPATH
 
