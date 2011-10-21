@@ -8,6 +8,7 @@ set autoindent
 
 " indent with 2 spaces
 set ts=2
+set shiftwidth=2
 
 " use spaces for tabs
 set expandtab
