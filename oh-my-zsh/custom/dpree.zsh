@@ -33,6 +33,11 @@ eval "$(rbenv init -)" # shims + autocompletion
 #rvm ruby-1.8.7
 
 #
+# Ruby
+#
+alias be='bundle exec'
+
+#
 # Cappuccino
 #
 
