@@ -10,21 +10,27 @@ export PATH="$HOME/bin:$PATH"
 CDPATH=$HOME:$HOME/dev; export CDPATH
 
 #
+# Ruby rbenv
+#
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)" # shims + autocompletion
+
+#
 # Ruby RVM
 #
 
 # rvm-with-zsh fix
 # see http://beginrescueend.com/integration/zsh/
-unsetopt auto_name_dirs
+#unsetopt auto_name_dirs
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session
 
 # original ruby with:
 # rvm system
 # set default
 # rvm --default use ruby-1.9.2-p136
 #rvm ruby-1.9.2-p136
-rvm ruby-1.8.7
+#rvm ruby-1.8.7
 
 #
 # Cappuccino
