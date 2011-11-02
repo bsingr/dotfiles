@@ -54,3 +54,9 @@ export SVN_EDITOR=/usr/bin/vim
 #
 
 export TM_SOFT_TABS=YES
+
+#
+# Git
+#
+alias pp='git pull && git push'
+
