@@ -6,8 +6,8 @@
 	interactive = auto
 	status = auto
 [user]
-	name = dpree
-	email = whiterabbit.init@gmail.com
+	name = Jens Bissinger
+	email = mail@jens-bissinger.de
 [core]
 	autocrlf = input
 	editor = mate -w
