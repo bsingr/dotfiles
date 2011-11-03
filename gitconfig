@@ -11,6 +11,8 @@
 [core]
 	autocrlf = input
 	editor = mate -w
+[branch]
+  autosetuprebase = always
 [apply]
 	whitespace = nowarn
 [alias]
