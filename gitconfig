@@ -10,7 +10,7 @@
 	email = mail@jens-bissinger.de
 [core]
 	autocrlf = input
-	editor = mate -w
+	editor = subl -w
 [branch]
   autosetuprebase = always
 [apply]
