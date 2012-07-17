@@ -56,6 +56,11 @@ export SVN_EDITOR=/usr/bin/vim
 export TM_SOFT_TABS=YES
 
 #
+# Sublime Text 2
+#
+export EDITOR='subl -w'
+
+#
 # Git
 #
 alias pp='git pull && git push'
