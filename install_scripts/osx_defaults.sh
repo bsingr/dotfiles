@@ -6,6 +6,14 @@ defaults write com.apple.safari IncludeDebugMenu -bool YES
 
 # dock invisible icons
 defaults write com.apple.Dock showhidden -boolean YES
+
+# dock show itunes title when start playing them
+defaults write com.apple.dock itunes=notifications -bool TRUE
+
+# make dock really small
+defaults write com.apple.dock tilesize -int 8
+
+# dock restart
 killall Dock
 
 # no report when app crashes
