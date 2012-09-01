@@ -1,3 +1,5 @@
+source $HOME/.aliases
+
 export CDPATH="$CDPATH:$HOME/dev"
 
 # home bin

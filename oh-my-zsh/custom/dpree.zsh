@@ -1,3 +1,5 @@
+source $HOME/.aliases
+
 #
 # PATH
 #
@@ -31,11 +33,6 @@ eval "$(rbenv init -)" # shims + autocompletion
 # rvm --default use ruby-1.9.2-p136
 #rvm ruby-1.9.2-p136
 #rvm ruby-1.8.7
-
-#
-# Ruby
-#
-alias be='bundle exec'
 
 #
 # Cappuccino
