@@ -1,3 +1,5 @@
+source $HOME/.aliases
+
 #
 # PATH
 #
@@ -33,11 +35,6 @@ eval "$(rbenv init -)" # shims + autocompletion
 #rvm ruby-1.8.7
 
 #
-# Ruby
-#
-alias be='bundle exec'
-
-#
 # Cappuccino
 #
 
@@ -59,9 +56,3 @@ export TM_SOFT_TABS=YES
 # Sublime Text 2
 #
 export EDITOR='subl -w'
-
-#
-# Git
-#
-alias pp='git pull && git push'
-
