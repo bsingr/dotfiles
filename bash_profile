@@ -12,6 +12,10 @@ export PATH="$HOME/bin:$PATH"
 # rbfu
 eval "$(rbfu --init --auto)"
 
+# speedup jvm boot and jruby
+export JAVA_OPTS="-d32 -client"
+export JRUBY_OPTS="-X-C"
+
 export EDITOR=vim
 export PAGER=less
 export BROWSER=chromium
