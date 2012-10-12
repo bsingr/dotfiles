@@ -2,7 +2,7 @@ source $HOME/.aliases
 
 export CDPATH="$CDPATH:$HOME/dev"
 
-function cdto { cd $(cdto.rb $1) }
+function cdto { cd $(cdto.rb $1); }
 
 # home bin
 export PATH="$HOME/bin:$PATH"
