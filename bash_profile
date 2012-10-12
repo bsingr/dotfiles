@@ -6,8 +6,11 @@ export CDPATH="$CDPATH:$HOME/dev"
 export PATH="$HOME/bin:$PATH"
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
+
+# rbfu
+eval "$(rbfu --init --auto)"
 
 export EDITOR=vim
 export PAGER=less
@@ -92,7 +95,14 @@ function parse_git_branch {
 }
 
 function parse_ruby_version {
-  rbenv version-name
+  # rbenv
+  #rbenv version-name
+
+  # plain (slow)
+  # ruby -v | sed "s/ruby \([^ ]*\).*/\1/"
+
+  # rbfu
+  [ "$RBFU_RUBY_VERSION" == "" ] && echo 'system' || echo $RBFU_RUBY_VERSION
 }
 
 # Return the prompt symbol to use, colorized based on the return value of the
