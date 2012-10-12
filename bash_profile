@@ -117,4 +117,4 @@ function set_bash_prompt () {
   PS1="${LIGHT_GRAY}\u@\h ${COLOR_NONE}\w ${RED}$(parse_ruby_version) ${VERSION_CONTROL_STATUS} ${COLOR_NONE}${PROMPT_SYMBOL} "
 }
 
-PROMPT_COMMAND=set_bash_prompt
+PROMPT_COMMAND="set_bash_prompt;$PROMPT_COMMAND"
