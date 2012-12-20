@@ -21,7 +21,6 @@ export JRUBY_OPTS="-X-C"
 export EDITOR=vim
 export PAGER=less
 export BROWSER=chromium
-alias ll='ls -laG'
 
 # The various escape codes that we can use to color our prompt.
         RED="\[\033[0;31m\]"

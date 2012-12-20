@@ -1,1 +1,3 @@
+# commands
+alias ll='ls -laG'
 alias be='bundle exec'
