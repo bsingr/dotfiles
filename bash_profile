@@ -81,7 +81,7 @@ function parse_git_branch {
         fi
         #diverged branch
         if [[ ${git_status} =~ ${diverge_pattern} ]]; then
-            remote="#{RED}↕"
+            remote="${RED}↕"
         fi
 
         #branch name
