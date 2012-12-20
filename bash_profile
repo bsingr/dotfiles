@@ -7,13 +7,6 @@ function cdto { cd $(cdto.rb $1); }
 # home bin
 export PATH="$HOME/bin:$PATH"
 
-# rbenv
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-
-# rbfu
-eval "$(rbfu --init --auto)"
-
 # speedup jvm boot and jruby
 export JAVA_OPTS="-d32 -client"
 export JRUBY_OPTS="-X-C"
@@ -21,6 +14,16 @@ export JRUBY_OPTS="-X-C"
 export EDITOR=vim
 export PAGER=less
 export BROWSER=chromium
+
+# rbenv
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
+
+# rbfu
+eval "$(rbfu --init --auto)"
+
+# Set GREP highlight color to red
+export GREP_COLOR='1;31'
 
 # The various escape codes that we can use to color our prompt.
         RED="\[\033[0;31m\]"
@@ -33,9 +36,6 @@ LIGHT_GREEN="\[\033[1;32m\]"
       WHITE="\[\033[1;37m\]"
  LIGHT_GRAY="\[\033[0;37m\]"
  COLOR_NONE="\[\e[0m\]"
-
-# Set GREP highlight color to red
-export GREP_COLOR='1;31'
 
 function is_git_repository {
   git branch > /dev/null 2>&1
