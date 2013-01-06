@@ -9,9 +9,13 @@ fi
 
 SUBL_PACKAGES="$HOME/Library/Application Support/Sublime Text 2/Packages"
 
-# install settings
-rm -f "$SUBL_PACKAGES/User/Preferences.sublime-settings"
-ln -s ~/Development/dotfiles/install_scripts/resources/Preferences.sublime-settings "$SUBL_PACKAGES/User/Preferences.sublime-settings"
+# settings installer
+function install_settings() {
+  settings_file=$1
+  echo "Installing $settings_file"
+  rm -f "$SUBL_PACKAGES/User/$settings_file"
+  ln -s "$HOME/Development/dotfiles/install_scripts/resources/$settings_file" "$SUBL_PACKAGES/User/$settings_file"
+}
 
 # plugin installer
 function install_plugin() {
@@ -28,6 +32,9 @@ function install_plugin() {
     fi
 }
 
+# install settings
+install_settings "Preferences.sublime-settings"
+
 # themes
 install_plugin "git://github.com/dpree/alien-autopsy.git" "Alien Autopsy"
 
@@ -39,3 +46,7 @@ install_plugin "git://github.com/Xavura/CoffeeScript-Sublime-Plugin.git" "Coffee
 install_plugin "git://github.com/fredwu/ruby-slim-tmbundle.git" "Ruby-Slim"
 install_plugin "git://github.com/handcrafted/handcrafted-haml-textmate-bundle.git" "Ruby-Haml"
 install_plugin "git://github.com/kuroir/SCSS.tmbundle.git" "SCSS"
+
+# special plugin with customization
+install_plugin "git://github.com/maltize/sublime-text-2-ruby-tests.git" "RubyTest"
+install_settings "RubyTest.sublime-settings"
