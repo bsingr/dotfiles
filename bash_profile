@@ -1,11 +1,9 @@
+source $HOME/.bashrc
 source $HOME/.aliases
 
 export CDPATH="$CDPATH:$HOME/dev"
 
 function cdto { cd $(cdto.rb $1); }
-
-# home bin
-export PATH="$HOME/bin:$PATH"
 
 # speedup jvm boot and jruby
 export JAVA_OPTS="-d32 -client"
