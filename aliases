@@ -1,3 +1,4 @@
 # commands
 alias ll='ls -laG'
+alias less='less -r'
 alias be='bundle exec'
