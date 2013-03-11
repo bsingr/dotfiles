@@ -2,3 +2,8 @@
 alias ll='ls -laG'
 alias less='less -r'
 alias be='bundle exec'
+
+# jruby
+alias xng='JRUBY_OPTS="" jruby --ng-server'
+alias xspork='jruby --ng -S spork'
+alias xspec='jruby --ng -S bundle exec rspec --drb'
