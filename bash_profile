@@ -131,3 +131,6 @@ function set_bash_prompt () {
 }
 
 PROMPT_COMMAND="set_bash_prompt;$PROMPT_COMMAND"
+
+
+[[ -s /Users/dpree/.nvm/nvm.sh ]] && . /Users/dpree/.nvm/nvm.sh # This loads NVM
