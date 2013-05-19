@@ -13,6 +13,9 @@ export EDITOR=vim
 export PAGER=less
 export BROWSER=chromium
 
+# load direnv
+eval "$(direnv hook $0)"
+
 # rbenv
 #export PATH="$HOME/.rbenv/bin:$PATH"
 #eval "$(rbenv init -)"
