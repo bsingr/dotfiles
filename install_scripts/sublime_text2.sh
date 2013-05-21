@@ -39,6 +39,9 @@ install_settings "Preferences.sublime-settings"
 install_plugin "git://github.com/dpree/alien-autopsy.git" "Alien Autopsy"
 
 # plugins
+install_plugin "git://github.com/facelessuser/ApplySyntax.git" "ApplySyntax"
+install_plugin "git://github.com/sindresorhus/editorconfig-sublime.git" "editorconfig"
+install_plugin "git://github.com/liamr/Zurb-Foundation-Textmate-Bundle.git" "Zurb-Foundation"
 install_plugin "git://github.com/SublimeText/RSpec.git" "RSpec"
 install_plugin "git://github.com/SublimeText/Rake.git" "Rake"
 install_plugin "git://github.com/noklesta/SublimeRailsNav.git" "RailsNav"
@@ -46,6 +49,7 @@ install_plugin "git://github.com/aponxi/sublime-better-coffeescript.git" "Coffee
 install_plugin "git://github.com/slim-template/ruby-slim.tmbundle.git" "Ruby-Slim"
 install_plugin "git://github.com/handcrafted/handcrafted-haml-textmate-bundle.git" "Ruby-Haml"
 install_plugin "git://github.com/kuroir/SCSS.tmbundle.git" "SCSS"
+install_plugin "git://github.com/danro/LESS-sublime.git" "LESS"
 install_plugin "git://github.com/lunixbochs/SublimeXiki.git" "Xiki"
 
 # special plugin with customization

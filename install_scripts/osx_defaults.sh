@@ -14,7 +14,7 @@ defaults write com.apple.Dock showhidden -boolean YES
 defaults write com.apple.dock itunes=notifications -bool TRUE
 
 # make dock really small
-defaults write com.apple.dock tilesize -int 8
+defaults write com.apple.dock tilesize -int 32
 
 # dock restart
 killall Dock
@@ -30,3 +30,6 @@ defaults write -g NSNavPanelExpandedStateForSaveMode -bool YES
 
 # login screen
 defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo 
+
+# show disks on desk
+defaults write com.apple.finder ShowMountedServersOnDesktop 1
