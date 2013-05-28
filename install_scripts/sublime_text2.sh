@@ -41,6 +41,7 @@ install_plugin "git://github.com/dpree/alien-autopsy.git" "Alien Autopsy"
 # plugins
 install_plugin "git://github.com/facelessuser/ApplySyntax.git" "ApplySyntax"
 install_plugin "git://github.com/sindresorhus/editorconfig-sublime.git" "editorconfig"
+install_plugin "git://github.com/pderichs/sublime_rubocop.git" "RuboCop"
 install_plugin "git://github.com/liamr/Zurb-Foundation-Textmate-Bundle.git" "Zurb-Foundation"
 install_plugin "git://github.com/SublimeText/RSpec.git" "RSpec"
 install_plugin "git://github.com/SublimeText/Rake.git" "Rake"
