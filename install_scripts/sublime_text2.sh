@@ -39,6 +39,7 @@ install_settings "Preferences.sublime-settings"
 install_plugin "git://github.com/dpree/alien-autopsy.git" "Alien Autopsy"
 
 # plugins
+install_plugin "git://github.com/ttscoff/MarkdownEditing.git" "MarkdownEditing"
 install_plugin "git://github.com/facelessuser/ApplySyntax.git" "ApplySyntax"
 install_plugin "git://github.com/sindresorhus/editorconfig-sublime.git" "editorconfig"
 install_plugin "git://github.com/pderichs/sublime_rubocop.git" "RuboCop"
