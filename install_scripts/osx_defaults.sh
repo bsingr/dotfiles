@@ -1,5 +1,8 @@
 # hidden files in finder
+# 10.7
 defaults write com.apple.finder AppleShowAllFiles -bool YES
+# 10.8
+defaults write com.apple.Finder AppleShowAllFiles YES
 
 # safari debug menu
 defaults write com.apple.safari IncludeDebugMenu -bool YES

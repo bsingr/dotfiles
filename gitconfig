@@ -12,8 +12,6 @@
 	autocrlf = input
 	editor = subl -w
 	excludesfile = /Users/dpree/.gitignore
-[branch]
-  autosetuprebase = always
 [apply]
 	whitespace = nowarn
 [alias]
