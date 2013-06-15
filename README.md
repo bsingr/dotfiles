@@ -1,6 +1,21 @@
 dotfiles
 ========
 
+## Features
+
+Automated installation of configuration and tools. Supports following applications:
+  
+  * Terminal
+    * Bash
+    * ZSH
+    * Git
+    * Ruby (chruby) 
+  * Sublime Text 2
+    * Plugins
+    * Themes 
+  * XCode
+    * Themes
+
 ## Installation
 
     git clone https://github.com/dpree/dotfiles.git ~/dotfiles
