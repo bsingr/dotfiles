@@ -27,3 +27,12 @@ Automated installation of configuration and tools. Supports following applicatio
     cd ~/dotfiles
     git pull
     rake
+
+# License
+
+See [LICENSE](LICENSE.txt).
+
+
+
+
+
