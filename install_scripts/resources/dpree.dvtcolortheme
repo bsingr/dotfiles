@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>DVTConsoleDebuggerInputTextColor</key>
-	<string>0 0 0 1</string>
+	<string>0.730912 0.265606 0.785317 1</string>
 	<key>DVTConsoleDebuggerInputTextFont</key>
 	<string>Menlo-Bold - 11.0</string>
 	<key>DVTConsoleDebuggerOutputTextColor</key>
-	<string>0 0 0 1</string>
+	<string>0.152031 0.723439 0.163764 1</string>
 	<key>DVTConsoleDebuggerOutputTextFont</key>
 	<string>Menlo-Regular - 11.0</string>
 	<key>DVTConsoleDebuggerPromptTextColor</key>
-	<string>0.317071 0.437736 1 1</string>
+	<string>0.821762 0.483336 0.827492 1</string>
 	<key>DVTConsoleDebuggerPromptTextFont</key>
 	<string>Menlo-Bold - 11.0</string>
 	<key>DVTConsoleExectuableInputTextColor</key>
-	<string>0 0 0 1</string>
+	<string>0.205362 0.40888 0.4345 1</string>
 	<key>DVTConsoleExectuableInputTextFont</key>
 	<string>Menlo-Regular - 11.0</string>
 	<key>DVTConsoleExectuableOutputTextColor</key>
-	<string>0 0 0 1</string>
+	<string>0.301446 0.616386 0.656244 1</string>
 	<key>DVTConsoleExectuableOutputTextFont</key>
 	<string>Menlo-Bold - 11.0</string>
 	<key>DVTConsoleTextBackgroundColor</key>
@@ -47,17 +47,17 @@
 		<key>xcode.syntax.character</key>
 		<string>0.235999 0.658014 0.0623234 1</string>
 		<key>xcode.syntax.comment</key>
-		<string>0.632639 0.632597 0.632622 1</string>
+		<string>0.796017 0.795993 0.796007 1</string>
 		<key>xcode.syntax.comment.doc</key>
-		<string>0.63637 0.636327 0.636352 1</string>
+		<string>0.857137 0.857037 0.857097 1</string>
 		<key>xcode.syntax.comment.doc.keyword</key>
-		<string>0.673617 0.673571 0.673598 1</string>
+		<string>0.897907 0.897802 0.897865 1</string>
 		<key>xcode.syntax.identifier.class</key>
-		<string>0.247 0.431 0.456 1</string>
+		<string>0.0972732 0.75621 0.651964 1</string>
 		<key>xcode.syntax.identifier.class.system</key>
 		<string>0.359 0.149 0.601 1</string>
 		<key>xcode.syntax.identifier.constant</key>
-		<string>0.149 0.278 0.294 1</string>
+		<string>0.212644 0.424553 0.451245 1</string>
 		<key>xcode.syntax.identifier.constant.system</key>
 		<string>0.181 0.052 0.431 1</string>
 		<key>xcode.syntax.identifier.function</key>
@@ -81,9 +81,9 @@
 		<key>xcode.syntax.number</key>
 		<string>0.235999 0.658014 0.0623234 1</string>
 		<key>xcode.syntax.plain</key>
-		<string>0.270256 0.270239 0.270249 1</string>
+		<string>0.281223 0.281194 0.281212 1</string>
 		<key>xcode.syntax.preprocessor</key>
-		<string>0.770524 0.770501 0.770514 1</string>
+		<string>0.881285 0.881225 0.88126 1</string>
 		<key>xcode.syntax.string</key>
 		<string>0.235999 0.658014 0.0623234 1</string>
 		<key>xcode.syntax.url</key>
