@@ -33,3 +33,6 @@ defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo
 
 # show disks on desk
 defaults write com.apple.finder ShowMountedServersOnDesktop 1
+
+# enable retina support on non-retina mac
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool YES
