@@ -2,7 +2,7 @@
 PATH=$HOME/bin:$PATH
 
 # homebrew
-PATH=$PATH:/usr/local/bin
+PATH=/usr/local/bin:$PATH
 
 # node / npm
 export NODE_PATH=/usr/local/lib/node
