@@ -1,13 +1,13 @@
 [github]
 	user = dpree
+[user]
+  name = Jens Bissinger
+  email = mail@jens-bissinger.de
 [color]
 	branch = auto
 	diff = auto
 	interactive = auto
 	status = auto
-[user]
-	name = Jens Bissinger
-	email = mail@jens-bissinger.de
 [core]
 	autocrlf = input
 	editor = subl -w
