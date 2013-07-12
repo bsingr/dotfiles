@@ -24,6 +24,7 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
+  sup = submodule update --recursive --init
 #[diff]
 #	external = /Users/dpree/git-diff-cmd.sh
 [difftool "sourcetree"]
