@@ -1,11 +1,9 @@
 #!/bin/bash
 
 # binary
-if test ! -s ~/bin/subl
-then
-  mkdir -p ~/bin
-  ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-fi
+mkdir -p ~/bin
+rm -rf ~/bin/subl
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 SUBL_PACKAGES="$HOME/Library/Application Support/Sublime Text 2/Packages"
 
