@@ -15,5 +15,3 @@ set expandtab
 
 " default file encoding
 set enc=utf-8
-
-
