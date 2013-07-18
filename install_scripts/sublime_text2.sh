@@ -5,7 +5,7 @@ mkdir -p ~/bin
 rm -rf ~/bin/subl
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
-SUBL_PACKAGES="$HOME/Library/Application Support/Sublime Text 2/Packages"
+SUBL_PACKAGES="$HOME/Library/Application Support/Sublime Text 3/Packages"
 
 # settings installer
 function install_settings() {
