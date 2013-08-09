@@ -9,7 +9,7 @@ function cdto { cd $(cdto.rb $1); }
 export JAVA_OPTS="-d32 -client"
 export JRUBY_OPTS="-X-C"
 
-export EDITOR=vim
+export EDITOR=subl
 export PAGER=less
 export BROWSER=chromium
 
