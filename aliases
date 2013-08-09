@@ -5,6 +5,7 @@ alias ll='ls -laG'
 alias less='less -r'
 alias be='bundle exec'
 alias bp='$EDITOR ~/.bash_profile'
+alias dote='pushd ~/dev/dotfiles && $EDITOR . && gitx && popd'
 
 # jruby
 alias xng='JRUBY_OPTS="" jruby --ng-server'
