@@ -4,6 +4,7 @@ alias gitx='gittower'
 alias ll='ls -laG'
 alias less='less -r'
 alias be='bundle exec'
+alias bp='$EDITOR ~/.bash_profile'
 
 # jruby
 alias xng='JRUBY_OPTS="" jruby --ng-server'
