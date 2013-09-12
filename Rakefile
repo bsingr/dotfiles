@@ -2,14 +2,10 @@ require 'rake'
 require 'erb'
 
 desc "install the dot files into user's home directory"
-task :install do
-  
-  # run install scripts
-  Dir["install_scripts/*"].each do |file|
-    puts file
-    system "chmod +x ./#{file} && ./#{file}"
-  end
-  
+task :install => [:link, :scripts]
+
+desc "link all files"
+task :link do
   # copy files
   replace_all = false
   Dir['*'].each do |file|
@@ -39,6 +35,15 @@ task :install do
     else
       link_file(file)
     end
+  end
+end
+
+desc "install scripts"
+task :scripts do
+  # run install scripts
+  Dir["install_scripts/*"].each do |file|
+    puts file
+    system "chmod +x ./#{file} && ./#{file}"
   end
 end
 
