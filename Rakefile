@@ -2,14 +2,10 @@ require 'rake'
 require 'erb'
 
 desc "install the dot files into user's home directory"
-task :install do
-  
-  # run install scripts
-  Dir["install_scripts/*"].each do |file|
-    puts file
-    system "chmod +x ./#{file} && ./#{file}"
-  end
-  
+task :install => [:link, :scripts]
+
+desc "link all files"
+task :link do
   # copy files
   replace_all = false
   Dir['*'].each do |file|
@@ -42,6 +38,15 @@ task :install do
   end
 end
 
+desc "install scripts"
+task :scripts do
+  # run install scripts
+  Dir["install_scripts/*"].each do |file|
+    puts file
+    system "chmod +x ./#{file} && ./#{file}"
+  end
+end
+
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub('.erb', '')}"}
   link_file(file)
@@ -55,6 +60,7 @@ def link_file(file)
     end
   else
     puts "linking ~/.#{file}"
+    system %{rm "$HOME/.#{file}"}
     system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
   end
 end
