@@ -60,6 +60,7 @@ def link_file(file)
     end
   else
     puts "linking ~/.#{file}"
+    system %{rm "$HOME/.#{file}"}
     system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
   end
 end
