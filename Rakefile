@@ -11,7 +11,9 @@ task :link do
   Dir['*'].each do |file|
     next if %w[Rakefile README.rdoc LICENSE install_scripts].include? file
     
-    if File.directory?(file)
+    if file == 'unison'
+      link_file(file)
+    elsif File.directory?(file)
       system %Q{cp -R ./#{file}/ "$HOME/.#{file}/"}
     elsif File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")
