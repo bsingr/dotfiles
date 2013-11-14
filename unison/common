@@ -1,0 +1,26 @@
+## Paths (directories or files) to synchronize
+
+# Directories
+path = Documents
+path = Development
+
+# ignores
+ignore = Name .DS_Store
+ignore = Name *.log
+ignore = Name *.sock
+
+## Miscellaneous settings
+rshargs = -C
+auto =true
+confirmbigdeletes = true
+perms = 0
+#owner = true
+#group = true
+times = true
+#force = newer
+sortbysize = true
+sortnewfirst = true
+maxthreads = 50
+log = true
+logfile = /Users/dpree/.unison/unison.log
+rsrc = true

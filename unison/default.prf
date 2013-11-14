@@ -1,0 +1,8 @@
+## Unison preferences file
+
+## Roots of the synchronization
+root = /Users/dpree/
+root = /Volumes/data/home-dpree/
+
+## Include common settings
+include common
