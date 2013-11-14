@@ -34,3 +34,5 @@
 	keepBackup = false
 [merge]
 	commit = yes
+[diff]
+  context = 5
