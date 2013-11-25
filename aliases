@@ -12,3 +12,6 @@ alias dote='pushd ~/dev/dotfiles && $EDITOR . && gitx && popd'
 alias xng='JRUBY_OPTS="" jruby --ng-server'
 alias xspork='jruby --ng -S spork'
 alias xspec='jruby --ng -S bundle exec rspec --drb'
+
+# public ip
+alias ipub='dig +short myip.opendns.com @resolver1.opendns.com'
