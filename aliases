@@ -1,13 +1,18 @@
+# git
 alias gitx='gittower'
 alias subl='choc'
 
 # commands
 alias ll='ls -laG'
 alias less='less -r'
+
+# dotfile editing
+alias dote='pushd ~/dev/dotfiles && $EDITOR . && gitx && popd'
+alias bp='$EDITOR ~/.bash_profile'
+
+# ruby
 alias be='bundle exec'
 alias bu='bundle update'
-alias bp='$EDITOR ~/.bash_profile'
-alias dote='pushd ~/dev/dotfiles && $EDITOR . && gitx && popd'
 
 # jruby
 alias xng='JRUBY_OPTS="" jruby --ng-server'
