@@ -1,4 +1,5 @@
 alias gitx='gittower'
+alias subl='choc'
 
 # commands
 alias ll='ls -laG'
