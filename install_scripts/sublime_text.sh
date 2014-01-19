@@ -1,33 +1,21 @@
 #!/bin/bash
 
+MY_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source "$MY_PATH/lib/_install_plugin.sh"
+
 # binary
 mkdir -p ~/bin
 rm -rf ~/bin/subl
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
-SUBL_PACKAGES="$HOME/Library/Application Support/Sublime Text 3/Packages"
+PACKAGES="$HOME/Library/Application Support/Sublime Text 3/Packages"
 
 # settings installer
 function install_settings() {
   settings_file=$1
   echo "Installing $settings_file"
-  rm -f "$SUBL_PACKAGES/User/$settings_file"
-  ln -s "$HOME/Development/dotfiles/install_scripts/resources/$settings_file" "$SUBL_PACKAGES/User/$settings_file"
-}
-
-# plugin installer
-function install_plugin() {
-    plugin_url=$1
-    plugin_name=$2
-
-    if test ! -s "$SUBL_PACKAGES/$plugin_name"
-    then
-      echo "Installing $plugin_name..."
-      git clone $plugin_url "$SUBL_PACKAGES/$plugin_name"
-    else
-      echo "Updating $plugin_name..."
-      git pull
-    fi
+  rm -f "$PACKAGES/User/$settings_file"
+  ln -s "$HOME/Development/dotfiles/install_scripts/resources/$settings_file" "$PACKAGES/User/$settings_file"
 }
 
 # install settings
