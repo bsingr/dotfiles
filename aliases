@@ -1,14 +1,23 @@
+# git
 alias gitx='gittower'
 alias subl='choc'
 
 # commands
 alias ll='ls -laG'
 alias less='less -r'
-alias be='bundle exec'
-alias bp='$EDITOR ~/.bash_profile'
+
+# dotfile editing
 alias dote='pushd ~/dev/dotfiles && $EDITOR . && gitx && popd'
+alias bp='$EDITOR ~/.bash_profile'
+
+# ruby
+alias be='bundle exec'
+alias bu='bundle update'
 
 # jruby
 alias xng='JRUBY_OPTS="" jruby --ng-server'
 alias xspork='jruby --ng -S spork'
 alias xspec='jruby --ng -S bundle exec rspec --drb'
+
+# public ip
+alias ipub='dig +short myip.opendns.com @resolver1.opendns.com'
