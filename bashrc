@@ -1,5 +1,5 @@
 # home
-PATH=$HOME/bin:$PATH
+PATH=$HOME/bin:./node_modules/.bin:$PATH
 
 # homebrew
 PATH=/usr/local/bin:$PATH
