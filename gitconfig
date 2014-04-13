@@ -37,3 +37,5 @@
 	commit = yes
 [diff]
   context = 5
+[push]
+	default = simple
