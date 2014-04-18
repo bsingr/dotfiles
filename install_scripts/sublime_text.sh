@@ -23,6 +23,7 @@ install_settings "Preferences.sublime-settings"
 
 # themes
 install_plugin "git://github.com/dpree/alien-autopsy.git" "Alien Autopsy"
+install_plugin "git://github.com/dpree/red-cross.git" "Red Cross"
 
 # plugins
 install_plugin "git://github.com/clintberry/sublime-text-2-ini.git" "INI"
