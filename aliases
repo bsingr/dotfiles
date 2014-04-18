@@ -1,6 +1,6 @@
 # git
 alias gitx='gittower'
-alias subl='choc'
+#alias subl='choc'
 
 # commands
 alias ll='ls -laG'
