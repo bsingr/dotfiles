@@ -31,12 +31,3 @@ Automated installation of configuration and tools. Supports following applicatio
 # License
 
 See [LICENSE](LICENSE.txt).
-
-
-
-
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dpree/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
