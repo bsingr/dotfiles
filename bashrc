@@ -11,6 +11,9 @@ PATH=$PATH:/usr/local/share/npm/bin
 # heroku
 PATH=/usr/local/heroku/bin:$PATH
 
+# projects
+PATH=./bin:$PATH
+
 export PATH
 
 ### Added by the Heroku Toolbelt
