@@ -11,7 +11,7 @@
 [core]
 	autocrlf = input
 	editor = subl -w
-	excludesfile = /Users/dpree/.gitignore
+	excludesfile = ~/.gitignore
 [apply]
 	whitespace = nowarn
 [alias]
