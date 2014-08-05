@@ -26,6 +26,7 @@ install_plugin "git://github.com/dpree/alien-autopsy.git" "Alien Autopsy"
 install_plugin "git://github.com/dpree/red-cross.git" "Red Cross"
 
 # plugins
+install_plugin "git://github.com/victorporof/Sublime-JSHint.git" "Sublime-JSHint"
 install_plugin "git://github.com/clintberry/sublime-text-2-ini.git" "INI"
 install_plugin "git://github.com/ttscoff/MarkdownEditing.git" "MarkdownEditing"
 install_plugin "git://github.com/facelessuser/ApplySyntax.git" "ApplySyntax"
