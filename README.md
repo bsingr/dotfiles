@@ -10,7 +10,7 @@ Automated installation of configuration and tools. Supports following applicatio
     * ZSH
     * Git
     * Ruby (chruby) 
-  * Sublime Text 2
+  * Sublime Text
     * Plugins
     * Themes 
   * XCode
