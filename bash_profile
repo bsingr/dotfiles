@@ -27,6 +27,10 @@ eval "$(direnv hook $0)"
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # Set GREP highlight color to red
 export GREP_COLOR='1;31'
 
@@ -141,6 +145,3 @@ function set_bash_prompt () {
 }
 
 PROMPT_COMMAND="set_bash_prompt;$PROMPT_COMMAND"
-
-
-[[ -s /Users/dpree/.nvm/nvm.sh ]] && . /Users/dpree/.nvm/nvm.sh # This loads NVM
