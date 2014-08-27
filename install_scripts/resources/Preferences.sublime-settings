@@ -1,14 +1,29 @@
 {
-	"color_scheme": "Packages/Red Cross/Red Cross.tmTheme",
+	"color_scheme": "Packages/Alien Autopsy/Alien Autopsy.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		"node_modules",
+		".sass-cache",
+		".git",
+		"tmp",
+		"log",
+		"cov",
+		"coverage",
+		"doc"
+	],
 	"font_face": "Menlo",
 	"font_options":
 	[
 	],
-	"font_size": 12.0,
+	"font_size": 15,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Vintage",
-		"Markdown"
+		"Markdown",
+		"RuboCop",
+		"Xiki"
 	],
 	"margin": 2,
 	"rulers":
@@ -18,7 +33,6 @@
 	"show_minimap": false,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
-	"folder_exclude_patterns": ["node_modules", ".sass-cache", ".git"],
-	"ensure_newline_at_eof_on_save": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"use_simple_full_screen": true
 }
