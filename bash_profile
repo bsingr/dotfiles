@@ -1,7 +1,7 @@
 source $HOME/.bashrc
 source $HOME/.aliases
 
-export CDPATH="$CDPATH:$HOME/dev"
+export CDPATH="$CDPATH:$HOME/Development"
 
 function cdto { cd $(cdto.rb $1); }
 
