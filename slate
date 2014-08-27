@@ -11,7 +11,7 @@ config windowHintsSpread true
 # Applications
 bind b:cmd;alt;ctrl;shift focus 'Google Chrome'
 bind e:cmd;alt;ctrl;shift focus 'Sublime Text'
-bind t:cmd;alt;ctrl;shift focus 'Terminal'
+bind t:cmd;alt;ctrl;shift focus 'iTerm'
 bind g:cmd;alt;ctrl;shift focus 'Tower'
 
 # Monitor Aliases
@@ -26,7 +26,7 @@ alias 1-sub   move screenOriginX;screenOriginY+2*screenSizeY/3  screenSizeX;1*sc
 layout sophos 'Google Chrome':REPEAT                   ${1-main}
 layout sophos 'Tower':REPEAT                           ${1-main}
 layout sophos 'Sublime Text':REPEAT                    ${1-main}
-layout sophos 'Terminal':REPEAT                        ${1-sub}
+layout sophos 'iTerm':REPEAT                        ${1-sub}
 
 # Layouts
 default sophos resolutions:${mon-dell};${mon-dell};${mon-mbp15}
@@ -43,24 +43,6 @@ bind c:cmd;alt;ctrl;shift grid padding:10 0:6,6 1:6,6 2:6,6
 # Full-Screen
 bind return:cmd;alt;ctrl;shift corner top-left resize:screenSizeX;screenSizeY
 
-# Move (Nudge) Bindings
-bind right:shift;alt nudge +10% +0
-bind left:shift;alt  nudge -10% +0
-bind up:shift;alt    nudge +0   -10%
-bind down:shift;alt  nudge +0   +10%
-
-# Resize Bindings
-bind right:alt       resize +10% +0
-bind left:alt        resize -10% +0
-bind up:alt          resize +0   -10%
-bind down:alt        resize +0   +10%
-
-# Push Bindings
-bind right:ctrl;alt  push right
-bind left:ctrl;alt   push left
-bind up:ctrl;alt     push up
-bind down:ctrl;alt   push down
-
 # Bindings to throw windows from one screen to another
 bind 1:cmd;alt;ctrl;shift         throw 0 resize
 bind 2:cmd;alt;ctrl;shift         throw 1 resize
@@ -69,3 +51,9 @@ bind right:cmd;alt;ctrl;shift     throw right resize
 bind left:cmd;alt;ctrl;shift      throw left  resize
 bind up:cmd;alt;ctrl;shift        throw up    resize
 bind down:cmd;alt;ctrl;shift      throw down  resize
+
+# Bindings to save layouts
+bind i:cmd;alt;ctrl;shift snapshot          snapOne save-to-disk
+bind k:cmd;alt;ctrl;shift activate-snapshot snapOne
+bind o:cmd;alt;ctrl;shift snapshot          snapTwo save-to-disk
+bind l:cmd;alt;ctrl;shift activate-snapshot snapTwo
