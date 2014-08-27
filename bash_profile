@@ -16,13 +16,6 @@ export BROWSER=chromium
 # load direnv
 eval "$(direnv hook $0)"
 
-# rbenv
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-
-# rbfu
-#eval "$(rbfu --init --auto)"
-
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
