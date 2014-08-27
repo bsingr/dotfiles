@@ -8,25 +8,25 @@ config windowHintsShowIcons true
 config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
 
-# Monitor Aliases
-alias mon-mbp15       1440x900
-alias mon-dell        1650x1050
-
-# Aliases
-alias 1-main  move screenOriginX;screenOriginY     screenSizeX;2*screenSizeY/3     ${mon-dell}
-alias 1-sub  move screenOriginX;screenOriginY+2*screenSizeY/3     screenSizeX;1*screenSizeY/3     ${mon-dell}
-
-# Applications
-layout sophos 'Google Chrome':REPEAT                   ${1-main}
-layout sophos 'Git Tower':REPEAT                       ${1-main}
-layout sophos 'Sublime Text':REPEAT                    ${1-main}
-layout sophos 'Terminal':REPEAT                        ${1-sub}
-
 # Applications
 bind b:cmd;alt;ctrl;shift focus 'Google Chrome'
 bind e:cmd;alt;ctrl;shift focus 'Sublime Text'
 bind t:cmd;alt;ctrl;shift focus 'Terminal'
-bind g:cmd;alt;ctrl;shift focus 'Git Tower'
+bind g:cmd;alt;ctrl;shift focus 'Tower'
+
+# Monitor Aliases
+alias mon-mbp15       1440x900   # mbp15-internal
+alias mon-dell        1650x1050  # dell
+
+# Aliases
+alias 1-main  move screenOriginX;screenOriginY                  screenSizeX;2*screenSizeY/3  ${mon-dell}
+alias 1-sub   move screenOriginX;screenOriginY+2*screenSizeY/3  screenSizeX;1*screenSizeY/3  ${mon-dell}
+
+# Applications
+layout sophos 'Google Chrome':REPEAT                   ${1-main}
+layout sophos 'Tower':REPEAT                           ${1-main}
+layout sophos 'Sublime Text':REPEAT                    ${1-main}
+layout sophos 'Terminal':REPEAT                        ${1-sub}
 
 # Layouts
 default sophos resolutions:${mon-dell};${mon-dell};${mon-mbp15}
@@ -40,21 +40,8 @@ bind esc:cmd hint
 # Grid
 bind c:cmd;alt;ctrl;shift grid padding:10 0:6,6 1:6,6 2:6,6
 
-# Resize Bindings
-bind right:alt       resize +10% +0
-bind left:alt        resize -10% +0
-bind up:alt          resize +0   -10%
-bind down:alt        resize +0   +10%
-bind right:ctrl;alt  resize -10% +0 bottom-right
-bind left:ctrl;alt   resize +10% +0 bottom-right
-bind up:ctrl;alt     resize +0   +10% bottom-right
-bind down:ctrl;alt   resize +0   -10% bottom-right
-
-# Push Bindings
-bind right:ctrl;cmd  push right bar-resize:screenSizeX/3
-bind left:ctrl;cmd   push left  bar-resize:screenSizeX/3
-bind up:ctrl;cmd     push up    bar-resize:screenSizeY/2
-bind down:ctrl;cmd   push down  bar-resize:screenSizeY/2
+# Full-Screen
+bind return:cmd;alt;ctrl;shift corner top-left resize:screenSizeX;screenSizeY
 
 # Move (Nudge) Bindings
 bind right:shift;alt nudge +10% +0
@@ -62,20 +49,23 @@ bind left:shift;alt  nudge -10% +0
 bind up:shift;alt    nudge +0   -10%
 bind down:shift;alt  nudge +0   +10%
 
-# Throw Bindings
-# Between screens
+# Resize Bindings
+bind right:alt       resize +10% +0
+bind left:alt        resize -10% +0
+bind up:alt          resize +0   -10%
+bind down:alt        resize +0   +10%
+
+# Push Bindings
+bind right:ctrl;alt  push right
+bind left:ctrl;alt   push left
+bind up:ctrl;alt     push up
+bind down:ctrl;alt   push down
+
+# Bindings to throw windows from one screen to another
 bind 1:cmd;alt;ctrl;shift         throw 0 resize
 bind 2:cmd;alt;ctrl;shift         throw 1 resize
 bind 3:cmd;alt;ctrl;shift         throw 2 resize
-bind right:ctrl;alt;cmd throw right resize
-bind left:ctrl;alt;cmd  throw left  resize
-bind up:ctrl;alt;cmd    throw up    resize
-bind down:ctrl;alt;cmd  throw down  resize
-
-# Focus Bindings
-bind right:cmd    focus right
-bind left:cmd     focus left
-bind up:cmd       focus up
-bind down:cmd     focus down
-bind up:cmd;alt   focus behind
-bind down:cmd;alt focus behind
+bind right:cmd;alt;ctrl;shift     throw right resize
+bind left:cmd;alt;ctrl;shift      throw left  resize
+bind up:cmd;alt;ctrl;shift        throw up    resize
+bind down:cmd;alt;ctrl;shift      throw down  resize
