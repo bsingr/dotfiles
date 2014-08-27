@@ -13,6 +13,10 @@ export EDITOR=subl
 export PAGER=less
 export BROWSER=chromium
 
+# history
+HISTSIZE=1000000
+HISTIGNORE='ls:bg:fg:history'
+
 # load direnv
 eval "$(direnv hook $0)"
 
