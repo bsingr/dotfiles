@@ -1,6 +1,10 @@
 source $HOME/.bashrc
 source $HOME/.aliases
 
+# sophos
+export CLOUD=4
+export DISABLE_PHANTOMJS_LOG=1
+
 export CDPATH="$CDPATH:$HOME/Development"
 
 function cdto { cd $(cdto.rb $1); }
@@ -31,11 +35,44 @@ source $(brew --prefix nvm)/nvm.sh
 # Set GREP highlight color to red
 export GREP_COLOR='1;31'
 
+# Fuzzy
+
+export FZF_DEFAULT_COMMAND="find * -path '*/\\.*' -prune -o -path '*\/node_modules\/*' -prune -o -type f -print -o -type l -print 2> /dev/null"
+export FZF_DEFAULT_OPTS="--sort 1000000000"
+
+# fe [FUZZY PATTERN] - Open the selected file with the default editor
+#   - Bypass fuzzy finder if there's only one match (--select-1)
+#   - Exit if there's no match (--exit-0)
+fe() {
+  local file
+  file=$(fzf --query="$1" --select-1 --exit-0)
+  [ -n "$file" ] && ${EDITOR:-vim} "$file"
+}
+
+# fd - cd to selected directory
+fd() {
+  local dir
+  dir=$(find ${1:-*} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
+# fh - repeat history
+fh() {
+  eval $(([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s | sed 's/ *[0-9]* *//')
+}
+
+# fkill - kill process
+fkill() {
+  ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
+}
+
+
 # The various escape codes that we can use to color our prompt.
         RED="\[\033[0;31m\]"
      YELLOW="\[\033[0;33m\]"
       GREEN="\[\033[0;32m\]"
-       CYAN="\[\033[0;36m\]" 
+       CYAN="\[\033[0;36m\]"
        BLUE="\[\033[0;34m\]"
   LIGHT_RED="\[\033[1;31m\]"
 LIGHT_GREEN="\[\033[1;32m\]"
