@@ -22,3 +22,4 @@ plugins=(git textmate ruby)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+source ~/.fzf.zsh
