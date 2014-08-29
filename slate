@@ -26,7 +26,7 @@ alias 1-sub   move screenOriginX;screenOriginY+2*screenSizeY/3  screenSizeX;1*sc
 layout sophos 'Google Chrome':REPEAT                   ${1-main}
 layout sophos 'Tower':REPEAT                           ${1-main}
 layout sophos 'Sublime Text':REPEAT                    ${1-main}
-layout sophos 'iTerm':REPEAT                        ${1-sub}
+layout sophos 'iTerm':REPEAT                           ${1-sub}
 
 # Layouts
 default sophos resolutions:${mon-dell};${mon-dell};${mon-mbp15}
@@ -47,10 +47,14 @@ bind return:cmd;alt;ctrl;shift corner top-left resize:screenSizeX;screenSizeY
 bind 1:cmd;alt;ctrl;shift         throw 0 resize
 bind 2:cmd;alt;ctrl;shift         throw 1 resize
 bind 3:cmd;alt;ctrl;shift         throw 2 resize
-bind right:cmd;alt;ctrl;shift     throw right resize
-bind left:cmd;alt;ctrl;shift      throw left  resize
-bind up:cmd;alt;ctrl;shift        throw up    resize
-bind down:cmd;alt;ctrl;shift      throw down  resize
+bind right:cmd;alt;ctrl;shift     throw right
+bind left:cmd;alt;ctrl;shift      throw left
+bind up:cmd;alt;ctrl;shift        throw up
+bind down:cmd;alt;ctrl;shift      throw down
+
+# Bindings to push windows within a screen
+bind left:cmd;ctrl                push left
+bind right:cmd;ctrl               push right
 
 # Bindings to save layouts
 bind i:cmd;alt;ctrl;shift snapshot          snapOne save-to-disk
