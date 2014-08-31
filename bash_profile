@@ -7,8 +7,6 @@ export DISABLE_PHANTOMJS_LOG=1
 
 export CDPATH="$CDPATH:$HOME/Development"
 
-function cdto { cd $(cdto.rb $1); }
-
 # speedup jvm boot and jruby
 export JAVA_OPTS="-d32 -client"
 export JRUBY_OPTS="-X-C"
