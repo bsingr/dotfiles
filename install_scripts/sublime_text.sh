@@ -42,9 +42,4 @@ install_plugin "git://github.com/slim-template/ruby-slim.tmbundle.git" "Ruby-Sli
 install_plugin "git://github.com/handcrafted/handcrafted-haml-textmate-bundle.git" "Ruby-Haml"
 install_plugin "git://github.com/kuroir/SCSS.tmbundle.git" "SCSS"
 install_plugin "git://github.com/danro/LESS-sublime.git" "LESS"
-install_plugin "git://github.com/lunixbochs/SublimeXiki.git" "Xiki"
 install_plugin "git://github.com/rmaksim/Sublime-Text-2-Inc-Dec-Value.git" "Inc-Dec-Value"
-
-# special plugin with customization
-install_plugin "git://github.com/maltize/sublime-text-2-ruby-tests.git" "RubyTest"
-install_settings "RubyTest.sublime-settings"
