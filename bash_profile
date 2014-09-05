@@ -15,6 +15,10 @@ export EDITOR=subl
 export PAGER=less
 export BROWSER=chromium
 
+# vagrant / docker
+export VAGRANT_DEFAULT_PROVIDER=docker
+export DOCKER_HOST=tcp://192.168.59.103:2375
+
 # history
 HISTSIZE=1000000
 HISTIGNORE='ls:bg:fg:history'
