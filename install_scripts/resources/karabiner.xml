@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+  <name>Remap Caps Lock to Hyper</name>
+    <appendix>OS X doesn't have a Hyper. This maps caps lock (actually F16) to Control + Shift + Option + Command.</appendix>
+    <appendix>This requires Seil to remap Caps Lock to F16</appendix>
+    <identifier>caps_lock_to_hyper</identifier>
+    <autogen>
+        --KeyToKey--
+        KeyCode::F16,
+
+        KeyCode::COMMAND_L,
+        ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+</root>
