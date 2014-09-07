@@ -1,6 +1,6 @@
 {
   "_comment": "Valid terminals include: 'Terminal.app' or 'iTerm'",
-  "terminal": "Terminal.app",
+  "terminal": "iTerm.app",
   "hosts": [
     {
        "name": "home",
