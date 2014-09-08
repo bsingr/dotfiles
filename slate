@@ -15,12 +15,13 @@ bind t:cmd;alt;ctrl;shift focus 'iTerm'
 bind g:cmd;alt;ctrl;shift focus 'Tower'
 
 # Monitor Aliases
-alias mon-mbp15       1440x900   # mbp15-internal
-alias mon-dell        1650x1050  # dell
+alias mon-mbp15       1440x900  # mbp15-internal
+alias mon-sophos     1650x1050  # dell
+alias mon-home       1920x1080  # acer home
 
 # Aliases
-alias 1-main  move screenOriginX;screenOriginY                  screenSizeX;2*screenSizeY/3  ${mon-dell}
-alias 1-sub   move screenOriginX;screenOriginY+2*screenSizeY/3  screenSizeX;1*screenSizeY/3  ${mon-dell}
+alias 1-main  move screenOriginX;screenOriginY                  screenSizeX;2*screenSizeY/3  ${mon-sophos}
+alias 1-sub   move screenOriginX;screenOriginY+2*screenSizeY/3  screenSizeX;1*screenSizeY/3  ${mon-sophos}
 
 # Applications
 layout sophos 'Google Chrome':REPEAT                   ${1-main}
@@ -29,7 +30,8 @@ layout sophos 'Sublime Text':REPEAT                    ${1-main}
 layout sophos 'iTerm':REPEAT                           ${1-sub}
 
 # Layouts
-default sophos resolutions:${mon-dell};${mon-dell};${mon-mbp15}
+default sophos resolutions:${mon-sophos};${mon-sophos};${mon-mbp15}
+default sophos resolutions:${mon-mbp15};${mon-home}
 
 # Layout Bindings
 bind padEnter:ctrl layout sophos
