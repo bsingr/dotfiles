@@ -5,6 +5,8 @@ source $HOME/.aliases
 export CLOUD=4
 export DISABLE_PHANTOMJS_LOG=1
 
+
+# development
 export CDPATH="$CDPATH:$HOME/Development"
 
 # speedup jvm boot and jruby
