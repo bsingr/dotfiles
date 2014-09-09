@@ -1,4 +1,0 @@
-require 'autotest/growl'
-Autotest::Growl::show_modified_files = true
-Autotest::Growl::hide_label = true
-Autotest::Growl::clear_terminal = false
