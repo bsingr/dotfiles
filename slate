@@ -31,7 +31,7 @@ layout sophos 'iTerm':REPEAT                           ${1-sub}
 
 # Layouts
 default sophos resolutions:${mon-sophos};${mon-sophos};${mon-mbp15}
-default sophos resolutions:${mon-mbp15};${mon-home}
+default home   resolutions:${mon-mbp15};${mon-home}
 
 # Layout Bindings
 bind padEnter:ctrl layout sophos
