@@ -5,9 +5,8 @@ source $HOME/.aliases
 export CLOUD=4
 export DISABLE_PHANTOMJS_LOG=1
 
+# development
 export CDPATH="$CDPATH:$HOME/Development"
-
-function cdto { cd $(cdto.rb $1); }
 
 # speedup jvm boot and jruby
 export JAVA_OPTS="-d32 -client"
@@ -17,6 +16,7 @@ export EDITOR=subl
 export PAGER=less
 export BROWSER=chromium
 
+<<<<<<< HEAD
 # history
 HISTSIZE=1000000
 HISTIGNORE='ls:bg:fg:history'
@@ -24,6 +24,19 @@ HISTIGNORE='ls:bg:fg:history'
 # load direnv
 eval "$(direnv hook $0)"
 
+=======
+# vagrant / docker
+export VAGRANT_DEFAULT_PROVIDER=docker
+export DOCKER_HOST=tcp://192.168.59.103:2375
+
+# history
+HISTSIZE=1000000
+HISTIGNORE='ls:bg:fg:history'
+
+# load direnv
+eval "$(direnv hook $0)"
+
+>>>>>>> 0c40a9a31e8504a6d22e2970a7d51dd2fd120a5d
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh

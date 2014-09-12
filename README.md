@@ -18,7 +18,7 @@ Automated installation of configuration and tools. Supports following applicatio
 
 ## Installation
 
-    git clone https://github.com/dpree/dotfiles.git ~/dotfiles
+    git clone https://github.com/bsingr/dotfiles.git ~/dotfiles
     cd ~/dotfiles
     rake
     
