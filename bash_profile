@@ -16,15 +16,6 @@ export EDITOR=subl
 export PAGER=less
 export BROWSER=chromium
 
-<<<<<<< HEAD
-# history
-HISTSIZE=1000000
-HISTIGNORE='ls:bg:fg:history'
-
-# load direnv
-eval "$(direnv hook $0)"
-
-=======
 # vagrant / docker
 export VAGRANT_DEFAULT_PROVIDER=docker
 export DOCKER_HOST=tcp://192.168.59.103:2375
@@ -36,7 +27,6 @@ HISTIGNORE='ls:bg:fg:history'
 # load direnv
 eval "$(direnv hook $0)"
 
->>>>>>> 0c40a9a31e8504a6d22e2970a7d51dd2fd120a5d
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
