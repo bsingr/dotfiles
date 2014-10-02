@@ -12,6 +12,9 @@ export CDPATH="$CDPATH:$HOME/Development"
 export JAVA_OPTS="-d32 -client"
 export JRUBY_OPTS="-X-C"
 
+export GOPATH=$HOME/Development/go
+export PATH=$PATH:$GOPATH/bin
+
 export EDITOR=subl
 export PAGER=less
 export BROWSER=chromium
