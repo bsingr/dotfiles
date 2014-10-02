@@ -19,5 +19,8 @@ alias xng='JRUBY_OPTS="" jruby --ng-server'
 alias xspork='jruby --ng -S spork'
 alias xspec='jruby --ng -S bundle exec rspec --drb'
 
+# go
+alias gcd='fd $GOPATH'
+
 # public ip
 alias ipub='dig +short myip.opendns.com @resolver1.opendns.com'
