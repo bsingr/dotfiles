@@ -20,8 +20,13 @@ export PAGER=less
 export BROWSER=chromium
 
 # vagrant / docker
-export VAGRANT_DEFAULT_PROVIDER=docker
-export DOCKER_HOST=tcp://192.168.59.103:2375
+#export VAGRANT_DEFAULT_PROVIDER=docker
+#export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+$(docker-osx env)
+
+docker-enter() {
+  docker-osx ssh -- '[ -f /usr/local/bin/docker-enter ] || docker run --rm -v /usr/local/bin:/target jpetazzo/nsenter'
+}
 
 # history
 HISTSIZE=1000000
