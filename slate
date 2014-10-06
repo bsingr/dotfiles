@@ -13,6 +13,8 @@ bind b:cmd;alt;ctrl;shift focus 'Google Chrome'
 bind e:cmd;alt;ctrl;shift focus 'Sublime Text'
 bind t:cmd;alt;ctrl;shift focus 'iTerm'
 bind g:cmd;alt;ctrl;shift focus 'Tower'
+bind n:cmd;alt;ctrl;shift focus 'Nachrichten'
+bind m:cmd;alt;ctrl;shift focus 'Mail'
 
 # Monitor Aliases
 alias mon-mbp15       1440x900  # mbp15-internal
