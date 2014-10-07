@@ -11,6 +11,9 @@ PATH=$PATH:/usr/local/share/npm/bin
 # heroku
 PATH=/usr/local/heroku/bin:$PATH
 
+# go
+PATH=$PATH:/usr/local/opt/go/libexec/bin
+
 # projects
 PATH=./bin:$PATH
 
