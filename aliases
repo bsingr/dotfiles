@@ -20,7 +20,8 @@ alias xspork='jruby --ng -S spork'
 alias xspec='jruby --ng -S bundle exec rspec --drb'
 
 # go
-alias gd='fd $GOPATH'
+alias gd='fdd $GOPATH'
+alias fd='fdd $HOME'
 
 # public ip
 alias ipub='dig +short myip.opendns.com @resolver1.opendns.com'
