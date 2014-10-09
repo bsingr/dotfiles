@@ -1,0 +1,14 @@
+{
+	"installed_packages":
+	[
+		"AlignTab",
+		"ColorPicker",
+		"GitGutter",
+		"GoSublime",
+		"Markdown Extended",
+		"Mou Markdown App (OSX)",
+		"Project Manager",
+		"SublimeCodeIntel",
+		"SublimeLinter-jshint"
+	]
+}

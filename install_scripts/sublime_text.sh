@@ -20,6 +20,7 @@ function install_settings() {
 
 # install settings
 install_settings "Preferences.sublime-settings"
+install_settings "Package Control.sublime-settings"
 
 # themes
 install_plugin "git://github.com/bsingr/alien-autopsy.git" "Alien Autopsy"
