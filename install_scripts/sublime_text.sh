@@ -28,7 +28,6 @@ install_plugin "git://github.com/bsingr/red-cross.git" "Red Cross"
 # plugins
 install_plugin "git://github.com/victorporof/Sublime-JSHint.git" "Sublime-JSHint"
 install_plugin "git://github.com/clintberry/sublime-text-2-ini.git" "INI"
-install_plugin "git://github.com/ttscoff/MarkdownEditing.git" "MarkdownEditing"
 install_plugin "git://github.com/facelessuser/ApplySyntax.git" "ApplySyntax"
 install_plugin "git://github.com/sindresorhus/editorconfig-sublime.git" "editorconfig"
 install_plugin "git://github.com/pderichs/sublime_rubocop.git" "RuboCop"
