@@ -13,7 +13,7 @@ export DISABLE_PHANTOMJS_LOG=1
 export CDPATH="$CDPATH:$HOME/Development"
 
 # speedup jvm boot and jruby
-export JAVA_OPTS="-d32 -client"
+export JAVA_OPTS="-d64 -client"
 export JRUBY_OPTS="-X-C"
 
 export GOPATH=$HOME/Development/go
