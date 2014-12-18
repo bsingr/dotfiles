@@ -1,4 +1,5 @@
 {
+	"bold_folder_labels": true,
 	"color_scheme": "Packages/Red Cross/Red Cross.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
@@ -16,22 +17,22 @@
 	"font_options":
 	[
 	],
-	"font_size": 15,
+	"font_size": 14,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
+		"Xiki",
 		"Markdown",
 		"RuboCop",
-		"Xiki"
+		"Vintage"
 	],
 	"margin": 2,
 	"rulers":
 	[
 		80
 	],
-	"show_minimap": false,
 	"tab_size": 2,
+	"theme": "Soda Light 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true
