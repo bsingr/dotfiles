@@ -5,6 +5,7 @@ alias gitx='gittower'
 # commands
 alias ll='ls -laG'
 alias less='less -r'
+alias grep='grep --color'
 
 # dotfile editing
 alias dote='pushd ~/dev/dotfiles && $EDITOR . && gitx && popd'
