@@ -1,4 +1,7 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"AlignTab",
@@ -7,6 +10,7 @@
 		"GoSublime",
 		"Markdown Extended",
 		"Mou Markdown App (OSX)",
+		"Package Control",
 		"PackageResourceViewer",
 		"Project Manager",
 		"SublimeCodeIntel",
