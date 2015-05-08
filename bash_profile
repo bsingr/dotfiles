@@ -5,9 +5,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
-# sophos
-export CLOUD=4
-export DISABLE_PHANTOMJS_LOG=1
 
 # development
 export CDPATH="$CDPATH:$HOME/Development"
