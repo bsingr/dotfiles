@@ -1,12 +1,16 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"AlignTab",
 		"ColorPicker",
-		"GitGutter",
 		"GoSublime",
+		"JavaScriptNext - ES6 Syntax",
 		"Markdown Extended",
 		"Mou Markdown App (OSX)",
+		"Package Control",
 		"PackageResourceViewer",
 		"Project Manager",
 		"SublimeCodeIntel",
