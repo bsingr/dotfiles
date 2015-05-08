@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # hidden files in finder
 # 10.7
 defaults write com.apple.finder AppleShowAllFiles -bool YES
@@ -29,7 +31,7 @@ defaults write com.apple.frameworks.diskimages skip-verify -bool YES
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool YES
 
 # login screen
-defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo 
+defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo
 
 # show disks on desk
 defaults write com.apple.finder ShowMountedServersOnDesktop 1
