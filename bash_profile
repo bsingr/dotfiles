@@ -21,6 +21,8 @@ export EDITOR=subl
 export PAGER=less
 export BROWSER=chromium
 
+export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+
 # vagrant / docker
 #export VAGRANT_DEFAULT_PROVIDER=docker
 #export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
