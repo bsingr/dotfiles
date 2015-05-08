@@ -26,7 +26,11 @@ export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
 # vagrant / docker
 #export VAGRANT_DEFAULT_PROVIDER=docker
 #export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
-$(docker-osx env)
+docker-osx > /dev/null
+if [ $? -eq 0 ]
+then
+    $(docker-osx env)
+fi
 
 docker-enter() {
   docker-osx ssh -- '[ -f /usr/local/bin/docker-enter ] || docker run --rm -v /usr/local/bin:/target jpetazzo/nsenter'
