@@ -1,19 +1,19 @@
 [github]
-	user = bsingr
+  user = bsingr
 [user]
-	name = Jens Bissinger
-	email = mail@jens-bissinger.de
+  name = Jens Bissinger
+  email = mail@jens-bissinger.de
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
 [core]
-	autocrlf = input
-	editor = subl -w
-	excludesfile = ~/.gitignore
+  autocrlf = input
+  editor = subl -w
+  excludesfile = ~/.gitignore
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [alias]
   st = status
   ci = commit
@@ -29,13 +29,13 @@
 #[diff]
 #	external = /Users/dpree/git-diff-cmd.sh
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool]
-	keepBackup = false
+  keepBackup = false
 [merge]
-	commit = yes
+  commit = yes
 [diff]
   context = 5
 [push]
-	default = simple
+  default = simple
