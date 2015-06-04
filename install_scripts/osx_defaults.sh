@@ -43,3 +43,5 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 defaults write -g InitialKeyRepeat -int 10
 defaults write -g KeyRepeat -int 1
 
+# enable CUPS on http://localhost:631
+sudo cupsctl WebInterface=yes
