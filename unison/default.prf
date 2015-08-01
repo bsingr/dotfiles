@@ -1,8 +1,8 @@
 ## Unison preferences file
 
 ## Roots of the synchronization
-root = /Users/dpree/
-root = /Volumes/data/home-dpree/
+root = /Volumes/Photos
+root = /Volumes/PhotosBackup
 
 ## Include common settings
 include common
