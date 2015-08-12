@@ -6,6 +6,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
 export PATH="./vendor/bin:$PATH"
 
