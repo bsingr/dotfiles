@@ -7,6 +7,8 @@ fi
 
 export PATH="/usr/local/sbin:$PATH"
 
+export PATH="./vendor/bin:$PATH"
+
 # development
 export CDPATH="$CDPATH:$HOME/Development"
 
