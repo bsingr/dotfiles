@@ -23,7 +23,7 @@ export EDITOR=subl
 export PAGER=less
 export BROWSER=chromium
 
-export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
 # vagrant / docker
 #export VAGRANT_DEFAULT_PROVIDER=docker
