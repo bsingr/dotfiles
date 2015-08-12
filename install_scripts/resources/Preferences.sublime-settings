@@ -1,6 +1,6 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Red Cross/Red Cross.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Red Cross (SL).tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
@@ -17,14 +17,14 @@
 	"font_options":
 	[
 	],
-	"font_size": 14,
+	"font_size": 13,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Xiki",
 		"RuboCop",
-		"Markdown",
-		"Vintage"
+		"Vintage",
+		"Markdown"
 	],
 	"margin": 2,
 	"rulers":
