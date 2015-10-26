@@ -10,7 +10,7 @@ config windowHintsSpread true
 
 # Applications
 bind b:cmd;alt;ctrl;shift focus 'Google Chrome'
-bind e:cmd;alt;ctrl;shift focus 'Sublime Text'
+bind e:cmd;alt;ctrl;shift focus 'Atom'
 bind t:cmd;alt;ctrl;shift focus 'iTerm'
 bind g:cmd;alt;ctrl;shift focus 'Tower'
 bind n:cmd;alt;ctrl;shift focus 'Nachrichten'

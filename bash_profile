@@ -20,7 +20,7 @@ export JRUBY_OPTS="-X-C"
 export GOPATH=$HOME/Development/go
 export PATH=$PATH:$GOPATH/bin
 
-export EDITOR=subl
+export EDITOR=atom
 export PAGER=less
 export BROWSER=chromium
 
