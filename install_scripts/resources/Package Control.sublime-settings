@@ -1,4 +1,6 @@
 {
+	"bootstrapped": true,
+	"ignore_vcs_packages": true,
 	"in_process_packages":
 	[
 	],
@@ -6,15 +8,21 @@
 	[
 		"AlignTab",
 		"ColorPicker",
+		"DocBlockr",
 		"GoSublime",
+		"Indent XML",
 		"JavaScriptNext - ES6 Syntax",
+		"Laravel Blade Highlighter",
 		"Markdown Extended",
 		"Mou Markdown App (OSX)",
 		"Package Control",
 		"PackageResourceViewer",
 		"Project Manager",
 		"SublimeCodeIntel",
-		"SublimeLinter-jshint",
-		"Theme - Soda"
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-phpcs",
+		"Theme - Soda",
+		"WakaTime"
 	]
 }
