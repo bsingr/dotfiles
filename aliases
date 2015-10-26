@@ -11,6 +11,10 @@ alias grep='grep --color'
 alias dote='pushd ~/dev/dotfiles && $EDITOR . && gitx && popd'
 alias bp='$EDITOR ~/.bash_profile'
 
+# editor
+alias ee='$EDITOR .'
+alias e='$EDITOR'
+
 # ruby
 alias be='bundle exec'
 alias bu='bundle update'
