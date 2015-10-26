@@ -26,18 +26,7 @@ export BROWSER=chromium
 
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
-# vagrant / docker
-#export VAGRANT_DEFAULT_PROVIDER=docker
-#export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
-docker-osx > /dev/null
-if [ $? -eq 0 ]
-then
-    $(docker-osx env)
-fi
-
-docker-enter() {
-  docker-osx ssh -- '[ -f /usr/local/bin/docker-enter ] || docker run --rm -v /usr/local/bin:/target jpetazzo/nsenter'
-}
+eval "$(docker-machine env dev)"
 
 # history
 HISTSIZE=1000000
