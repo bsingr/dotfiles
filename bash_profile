@@ -85,11 +85,11 @@ function parse_git_branch {
     git rev-parse --git-dir > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         git_status="$(git status 2> /dev/null)"
-        branch_pattern="^# On branch ([^${IFS}]*)"
-        detached_branch_pattern="# Not currently on any branch"
-        remote_pattern="# Your branch is (.*) '"
-        diverge_pattern="# Your branch and (.*) have diverged"
-        untracked_pattern="# Untracked files:"
+        branch_pattern="^On branch ([^${IFS}]*)"
+        detached_branch_pattern="Not currently on any branch"
+        remote_pattern="Your branch is (.*) '"
+        diverge_pattern="Your branch and (.*) have diverged"
+        untracked_pattern="Untracked files:"
         staged_pattern="Changes to be committed"
         not_staged_pattern="Changes not staged for commit"
 
