@@ -29,7 +29,7 @@ source $BREW_PATH/share/chruby/auto.sh
 # nvm
 export NVM_DIR=~/.nvm
 # determined using (the slowish): brew --prefix nvm
-#source $BREW_PATH/opt/nvm/nvm.sh
+source $BREW_PATH/opt/nvm/nvm.sh
 
 # Set GREP highlight color to red
 export GREP_COLOR='1;31'
