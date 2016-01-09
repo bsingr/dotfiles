@@ -153,6 +153,11 @@ function parse_git_branch {
     return
 }
 
+function parse_node_version {
+  # nvm
+  [ "$NVM_RC_VERSION" == "" ] && echo "system" || echo $NVM_RC_VERSION
+}
+
 function parse_ruby_version {
   # chruby
   [ "$RUBY_VERSION" == "" ] && echo 'system' || echo $RUBY_VERSION
@@ -177,7 +182,7 @@ function set_bash_prompt () {
   parse_git_branch
 
   # Set the bash prompt variable.
-  PS1="${LIGHT_GRAY}\u@\h ${COLOR_NONE}\w ${RED}$(parse_ruby_version) ${VERSION_CONTROL_STATUS} ${COLOR_NONE}${PROMPT_SYMBOL} "
+  PS1="${LIGHT_GRAY}\u@\h ${COLOR_NONE}\w ${GREEN}$(parse_node_version) ${RED}$(parse_ruby_version) ${VERSION_CONTROL_STATUS} ${COLOR_NONE}${PROMPT_SYMBOL} "
 }
 
 PROMPT_COMMAND="set_bash_prompt;$PROMPT_COMMAND"
