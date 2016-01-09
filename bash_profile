@@ -1,32 +1,19 @@
 source $HOME/.bashrc
 source $HOME/.aliases
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+# determined using (the slowish): brew --prefix
+if [ -f $BREW_PATH/etc/bash_completion ]; then
+  . $BREW_PATH/etc/bash_completion
 fi
-
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-
-export PATH="./vendor/bin:$PATH"
 
 # development
 export CDPATH="$CDPATH:$HOME/Development"
-
-# speedup jvm boot and jruby
-export JAVA_OPTS="-d64 -client"
-export JRUBY_OPTS="-X-C"
-
-export GOPATH=$HOME/Development/go
-export PATH=$PATH:$GOPATH/bin
 
 export EDITOR=atom
 export PAGER=less
 export BROWSER=chromium
 
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-
-eval "$(docker-machine env dev)"
+which docker-machine && eval "$(docker-machine env dev)"
 
 # history
 HISTSIZE=1000000
@@ -36,18 +23,18 @@ HISTIGNORE='ls:bg:fg:history'
 eval "$(direnv hook $0)"
 
 # chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+source $BREW_PATH/share/chruby/chruby.sh
+source $BREW_PATH/share/chruby/auto.sh
 
 # nvm
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# determined using (the slowish): brew --prefix nvm
+#source $BREW_PATH/opt/nvm/nvm.sh
 
 # Set GREP highlight color to red
 export GREP_COLOR='1;31'
 
 # Fuzzy
-
 export FZF_DEFAULT_COMMAND="find * -path '*/\\.*' -prune -o -path '*\/node_modules\/*' -prune -o -type f -print -o -type l -print 2> /dev/null"
 export FZF_DEFAULT_OPTS="--sort 1000000000"
 
@@ -77,7 +64,6 @@ fh() {
 fkill() {
   ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
 }
-
 
 # The various escape codes that we can use to color our prompt.
         RED="\[\033[0;31m\]"
@@ -167,9 +153,9 @@ function parse_ruby_version {
 # previous command.
 function set_prompt_symbol () {
   if test $1 -eq 0 ; then
-      PROMPT_SYMBOL="\$"
+    PROMPT_SYMBOL="\$"
   else
-      PROMPT_SYMBOL="${RED}\$${COLOR_NONE}"
+    PROMPT_SYMBOL="${RED}\$${COLOR_NONE}"
   fi
 }
 
