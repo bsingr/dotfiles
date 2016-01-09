@@ -154,8 +154,8 @@ function parse_git_branch {
 }
 
 function parse_node_version {
-  # nvm
-  [ "$NVM_RC_VERSION" == "" ] && echo "system" || echo "${NVM_RC_VERSION:1}"
+  NODE_VERSION=`node -v`
+  echo "${NODE_VERSION:1}"
 }
 
 function parse_ruby_version {
