@@ -154,15 +154,6 @@ function parse_git_branch {
 }
 
 function parse_ruby_version {
-  # rbenv
-  #rbenv version-name
-
-  # plain (slow)
-  # ruby -v | sed "s/ruby \([^ ]*\).*/\1/"
-
-  # rbfu
-  #[ "$RUBY_VERSION" == "" ] && echo 'system' || echo $RBFU_RUBY_VERSION
-
   # chruby
   [ "$RUBY_VERSION" == "" ] && echo 'system' || echo $RUBY_VERSION
 }
