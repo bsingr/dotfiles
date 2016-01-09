@@ -87,7 +87,7 @@ function parse_git_branch {
         git_status="$(git status 2> /dev/null)"
         branch_pattern="^On branch ([^${IFS}]*)"
         detached_branch_pattern="Not currently on any branch"
-        remote_pattern="Your branch is (.*) of '.*' by ([0-9]*)"
+        remote_pattern="Your branch is (ahead of|behind) '.*' by ([0-9]*)"
         diverge_pattern="Your branch and (.*) have diverged"
         untracked_pattern="Untracked files:"
         staged_pattern="Changes to be committed"
@@ -113,7 +113,7 @@ function parse_git_branch {
         if [[ ${git_status} =~ ${remote_pattern} ]]; then
             remote_state="${BASH_REMATCH[1]}"
             remote_idx="${BASH_REMATCH[2]}"
-            if [[ ${remote_state} == "ahead" ]]; then
+            if [[ ${remote_state} == "ahead of" ]]; then
                 remote="${COLOR_NONE}↑${remote_idx}"
             elif [[ ${remote_state} == "behind" ]]; then
                 remote="${COLOR_NONE}↓${remote_idx}"
