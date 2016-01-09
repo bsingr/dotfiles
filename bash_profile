@@ -87,7 +87,7 @@ function parse_git_branch {
         git_status="$(git status 2> /dev/null)"
         branch_pattern="^On branch ([^${IFS}]*)"
         detached_branch_pattern="Not currently on any branch"
-        remote_pattern="Your branch is (.*) '"
+        remote_pattern="Your branch is (.*) of '.*' by ([0-9]*)"
         diverge_pattern="Your branch and (.*) have diverged"
         untracked_pattern="Untracked files:"
         staged_pattern="Changes to be committed"
@@ -111,11 +111,12 @@ function parse_git_branch {
         # show if we're ahead or behind HEAD
         remote=""
         if [[ ${git_status} =~ ${remote_pattern} ]]; then
-            found="${BASH_REMATCH[1]}"
-            if [[ ${found} == "ahead" ]]; then
-                remote="${COLOR_NONE}↑"
-            elif [[ ${found} == "behind" ]]; then
-                remote="${COLOR_NONE}↓"
+            remote_state="${BASH_REMATCH[1]}"
+            remote_idx="${BASH_REMATCH[2]}"
+            if [[ ${remote_state} == "ahead" ]]; then
+                remote="${COLOR_NONE}↑${remote_idx}"
+            elif [[ ${remote_state} == "behind" ]]; then
+                remote="${COLOR_NONE}↓${remote_idx}"
             fi
         fi
         #diverged branch
@@ -131,7 +132,7 @@ function parse_git_branch {
             branch="NO BRANCH"
         fi
 
-      VERSION_CONTROL_STATUS="${COLOR_NONE}${remote}${state}${branch}${COLOR_NONE}"
+      VERSION_CONTROL_STATUS="${COLOR_NONE}${remote} ${state}${branch}${COLOR_NONE}"
     else
       VERSION_CONTROL_STATUS=""
     fi
