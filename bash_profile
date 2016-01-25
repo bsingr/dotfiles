@@ -10,6 +10,8 @@ export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
 export PATH="./vendor/bin:$PATH"
 
+export PATH="$HOME/.local/lib/aws/bin:$PATH"
+
 # development
 export CDPATH="$CDPATH:$HOME/Development"
 
