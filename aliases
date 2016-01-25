@@ -7,6 +7,9 @@ alias ll='ls -laG'
 alias less='less -r'
 alias grep='grep --color'
 
+# linux compatibility, install via brew install gnu-tar
+alias tar='gtar'
+
 # dotfile editing
 alias dote='pushd ~/dev/dotfiles && $EDITOR . && gitx && popd'
 alias bp='$EDITOR ~/.bash_profile'
