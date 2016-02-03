@@ -41,3 +41,6 @@ PATH="/usr/local/heroku/bin:$PATH"
 export PATH
 
 source ~/.fzf.bash
+
+export NVM_DIR="/Users/bsingr/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
