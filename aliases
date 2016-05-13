@@ -2,7 +2,7 @@
 alias gitx='gittower'
 
 # commands
-alias ll='ls -laG'
+alias ll='ls -laFG'
 alias less='less -r'
 alias grep='grep --color'
 
