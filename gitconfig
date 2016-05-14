@@ -10,7 +10,7 @@
   status = auto
 [core]
   autocrlf = input
-  editor = e
+  editor = vim
   excludesfile = ~/.gitignore
 [apply]
   whitespace = nowarn
