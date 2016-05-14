@@ -9,8 +9,8 @@ task :link do
   # copy files
   replace_all = false
   Dir['*'].each do |file|
-    next if %w[Rakefile README.rdoc LICENSE install_scripts].include? file
-    
+    next if %w[Rakefile README* LICENSE* install_scripts].include? file
+
     if file == 'unison'
       link_file(file)
     elsif File.directory?(file)
