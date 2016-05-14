@@ -1,1 +1,1 @@
-brew install imagemagick nvm ruby-install chruby mysql php56
+brew install nvm ruby-install chruby php56
