@@ -6,6 +6,13 @@ if [ -f $BREW_PATH/etc/bash_completion ]; then
   . $BREW_PATH/etc/bash_completion
 fi
 
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+
+export PATH="./vendor/bin:$PATH"
+
+export PATH="$HOME/.local/lib/aws/bin:$PATH"
+
 # development
 export CDPATH="$CDPATH:$HOME/Development"
 
