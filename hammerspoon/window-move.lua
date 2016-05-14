@@ -1,3 +1,24 @@
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 18, function()
+  local win = hs.window.focusedWindow()
+  local screen = hs.screen.allScreens()[1]
+  win:moveToScreen(screen)
+  win:setFrame(screen:frame())
+end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 19, function()
+  local win = hs.window.focusedWindow()
+  local screen = hs.screen.allScreens()[2]
+  win:moveToScreen(screen)
+  win:setFrame(screen:frame())
+end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 20, function()
+  local win = hs.window.focusedWindow()
+  local screen = hs.screen.allScreens()[3]
+  win:moveToScreen(screen)
+  win:setFrame(screen:frame())
+end)
+
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Up", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
