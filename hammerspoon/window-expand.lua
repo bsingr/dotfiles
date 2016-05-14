@@ -10,3 +10,8 @@ hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Return", function()
   f.h = max.h
   win:setFrame(f)
 end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "F", function()
+  local win = hs.window.focusedWindow()
+  win:toggleFullScreen()
+end)
