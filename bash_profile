@@ -20,7 +20,7 @@ export EDITOR=atom
 export PAGER=less
 export BROWSER=chromium
 
-which docker-machine && eval "$(docker-machine env dev)"
+which docker-machine && eval "$(docker-machine env default)"
 
 # history
 HISTSIZE=1000000
