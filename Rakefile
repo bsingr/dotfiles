@@ -9,13 +9,9 @@ task :link do
   # copy files
   replace_all = false
   Dir['*'].each do |file|
-    next if %w[Rakefile README.rdoc LICENSE install_scripts].include? file
-    
-    if file == 'unison'
-      link_file(file)
-    elsif File.directory?(file)
-      system %Q{cp -R ./#{file}/ "$HOME/.#{file}/"}
-    elsif File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
+    next if %w[Rakefile README* LICENSE* install_scripts tool_scripts].include? file
+
+    if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")
         puts "identical ~/.#{file.sub('.erb', '')}"
       elsif replace_all
@@ -68,4 +64,3 @@ def link_file(file)
 end
 
 task :default => :install
-
