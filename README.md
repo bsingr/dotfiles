@@ -4,15 +4,15 @@ dotfiles
 ## Features
 
 Automated installation of configuration and tools. Supports following applications:
-  
+
   * Terminal
     * Bash
     * ZSH
     * Git
-    * Ruby (chruby) 
-  * Sublime Text
+    * Ruby (chruby)
+  * Atom
     * Plugins
-    * Themes 
+    * Themes
   * XCode
     * Themes
 
@@ -21,7 +21,7 @@ Automated installation of configuration and tools. Supports following applicatio
     git clone https://github.com/bsingr/dotfiles.git ~/dotfiles
     cd ~/dotfiles
     rake
-    
+
 ## Update
 
     cd ~/dotfiles

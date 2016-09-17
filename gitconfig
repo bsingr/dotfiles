@@ -10,7 +10,7 @@
   status = auto
 [core]
   autocrlf = input
-  editor = subl -w
+  editor = vim
   excludesfile = ~/.gitignore
 [apply]
   whitespace = nowarn
@@ -26,11 +26,9 @@
   ls = ls-files
   sup = submodule update --recursive --init
   sunc = submodule sync
-#[diff]
-#	external = /Users/dpree/git-diff-cmd.sh
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+  path =
 [mergetool]
   keepBackup = false
 [merge]

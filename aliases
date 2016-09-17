@@ -1,15 +1,21 @@
 # git
 alias gitx='gittower'
-#alias subl='choc'
 
 # commands
-alias ll='ls -laG'
+alias ll='ls -laFG'
 alias less='less -r'
 alias grep='grep --color'
+
+# linux compatibility, install via brew install gnu-tar
+alias tar='gtar'
 
 # dotfile editing
 alias dote='pushd ~/dev/dotfiles && $EDITOR . && gitx && popd'
 alias bp='$EDITOR ~/.bash_profile'
+
+# editor
+alias ee='$EDITOR .'
+alias e='$EDITOR'
 
 # ruby
 alias be='bundle exec'

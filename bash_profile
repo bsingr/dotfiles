@@ -1,41 +1,26 @@
 source $HOME/.bashrc
 source $HOME/.aliases
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+# determined using (the slowish): brew --prefix
+if [ -f $BREW_PATH/etc/bash_completion ]; then
+  . $BREW_PATH/etc/bash_completion
 fi
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
+export PATH="./vendor/bin:$PATH"
+
+export PATH="$HOME/.local/lib/aws/bin:$PATH"
+
 # development
 export CDPATH="$CDPATH:$HOME/Development"
 
-# speedup jvm boot and jruby
-export JAVA_OPTS="-d64 -client"
-export JRUBY_OPTS="-X-C"
-
-export GOPATH=$HOME/Development/go
-export PATH=$PATH:$GOPATH/bin
-
-export EDITOR=subl
+export EDITOR=atom
 export PAGER=less
 export BROWSER=chromium
 
-export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
-
-# vagrant / docker
-#export VAGRANT_DEFAULT_PROVIDER=docker
-#export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
-docker-osx > /dev/null
-if [ $? -eq 0 ]
-then
-    $(docker-osx env)
-fi
-
-docker-enter() {
-  docker-osx ssh -- '[ -f /usr/local/bin/docker-enter ] || docker run --rm -v /usr/local/bin:/target jpetazzo/nsenter'
-}
+which docker-machine && eval "$(docker-machine env default)"
 
 # history
 HISTSIZE=1000000
@@ -45,18 +30,18 @@ HISTIGNORE='ls:bg:fg:history'
 eval "$(direnv hook $0)"
 
 # chruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+source $BREW_PATH/share/chruby/chruby.sh
+source $BREW_PATH/share/chruby/auto.sh
 
 # nvm
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# determined using (the slowish): brew --prefix nvm
+source $BREW_PATH/opt/nvm/nvm.sh
 
 # Set GREP highlight color to red
 export GREP_COLOR='1;31'
 
 # Fuzzy
-
 export FZF_DEFAULT_COMMAND="find * -path '*/\\.*' -prune -o -path '*\/node_modules\/*' -prune -o -type f -print -o -type l -print 2> /dev/null"
 export FZF_DEFAULT_OPTS="--sort 1000000000"
 
@@ -87,7 +72,6 @@ fkill() {
   ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
 }
 
-
 # The various escape codes that we can use to color our prompt.
         RED="\[\033[0;31m\]"
      YELLOW="\[\033[0;33m\]"
@@ -108,11 +92,11 @@ function parse_git_branch {
     git rev-parse --git-dir > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         git_status="$(git status 2> /dev/null)"
-        branch_pattern="^# On branch ([^${IFS}]*)"
-        detached_branch_pattern="# Not currently on any branch"
-        remote_pattern="# Your branch is (.*) '"
-        diverge_pattern="# Your branch and (.*) have diverged"
-        untracked_pattern="# Untracked files:"
+        branch_pattern="^On branch ([^${IFS}]*)"
+        detached_branch_pattern="Not currently on any branch"
+        remote_pattern="Your branch is (ahead of|behind) '.*' by ([0-9]*)"
+        diverge_pattern="Your branch and (.*) have diverged"
+        untracked_pattern="Untracked files:"
         staged_pattern="Changes to be committed"
         not_staged_pattern="Changes not staged for commit"
 
@@ -134,11 +118,12 @@ function parse_git_branch {
         # show if we're ahead or behind HEAD
         remote=""
         if [[ ${git_status} =~ ${remote_pattern} ]]; then
-            found="${BASH_REMATCH[1]}"
-            if [[ ${found} == "ahead" ]]; then
-                remote="${COLOR_NONE}↑"
-            elif [[ ${found} == "behind" ]]; then
-                remote="${COLOR_NONE}↓"
+            remote_state="${BASH_REMATCH[1]}"
+            remote_idx="${BASH_REMATCH[2]}"
+            if [[ ${remote_state} == "ahead of" ]]; then
+                remote="${COLOR_NONE}↑${remote_idx}"
+            elif [[ ${remote_state} == "behind" ]]; then
+                remote="${COLOR_NONE}↓${remote_idx}"
             fi
         fi
         #diverged branch
@@ -154,7 +139,7 @@ function parse_git_branch {
             branch="NO BRANCH"
         fi
 
-      VERSION_CONTROL_STATUS="${COLOR_NONE}${remote}${state}${branch}${COLOR_NONE}"
+      VERSION_CONTROL_STATUS="${COLOR_NONE}${remote} ${state}${branch}${COLOR_NONE}"
     else
       VERSION_CONTROL_STATUS=""
     fi
@@ -162,16 +147,12 @@ function parse_git_branch {
     return
 }
 
+function parse_node_version {
+  NODE_VERSION=`node -v`
+  echo "${NODE_VERSION:1}"
+}
+
 function parse_ruby_version {
-  # rbenv
-  #rbenv version-name
-
-  # plain (slow)
-  # ruby -v | sed "s/ruby \([^ ]*\).*/\1/"
-
-  # rbfu
-  #[ "$RUBY_VERSION" == "" ] && echo 'system' || echo $RBFU_RUBY_VERSION
-
   # chruby
   [ "$RUBY_VERSION" == "" ] && echo 'system' || echo $RUBY_VERSION
 }
@@ -180,9 +161,9 @@ function parse_ruby_version {
 # previous command.
 function set_prompt_symbol () {
   if test $1 -eq 0 ; then
-      PROMPT_SYMBOL="\$"
+    PROMPT_SYMBOL="\$"
   else
-      PROMPT_SYMBOL="${RED}\$${COLOR_NONE}"
+    PROMPT_SYMBOL="${RED}\$${COLOR_NONE}"
   fi
 }
 
@@ -195,7 +176,7 @@ function set_bash_prompt () {
   parse_git_branch
 
   # Set the bash prompt variable.
-  PS1="${LIGHT_GRAY}\u@\h ${COLOR_NONE}\w ${RED}$(parse_ruby_version) ${VERSION_CONTROL_STATUS} ${COLOR_NONE}${PROMPT_SYMBOL} "
+  PS1="${LIGHT_GRAY}\u@\h ${COLOR_NONE}\w ${GREEN}$(parse_node_version) ${RED}$(parse_ruby_version) ${VERSION_CONTROL_STATUS} ${COLOR_NONE}${PROMPT_SYMBOL} "
 }
 
 PROMPT_COMMAND="set_bash_prompt;$PROMPT_COMMAND"
