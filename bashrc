@@ -6,6 +6,9 @@ PATH=$BREW_PATH/bin:$PATH
 # home
 PATH=$HOME/bin:$PATH
 
+# deploy tools
+PATH=$HOME/Development/deploy-tools:$PATH
+
 # system
 PATH="/usr/local/sbin:$PATH"
 
