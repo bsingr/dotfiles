@@ -1,17 +1,6 @@
 "VIM config
 
-" set runtime path to include vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let vundle manage vundle
-Plugin 'gmarik/Vundle.vim'
-
-
-" end vundle plugins
-call vundle#end()
 filetype plugin indent on
-
 
 " syntax highlighting
 syn on
