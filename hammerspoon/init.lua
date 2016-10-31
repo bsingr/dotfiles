@@ -2,7 +2,7 @@ require "app-switch"
 -- require "app-layout"
 require "window-move"
 require "window-expand"
-require "window-grid"
+-- require "window-grid"
 
 hs.window.animationDuration = 0
 hs.grid.setMargins("0 0")
