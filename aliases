@@ -20,16 +20,6 @@ alias e='$EDITOR'
 # ruby
 alias be='bundle exec'
 alias bu='bundle update'
-alias rt='ruby -I test'
-
-# jruby
-alias xng='JRUBY_OPTS="" jruby --ng-server'
-alias xspork='jruby --ng -S spork'
-alias xspec='jruby --ng -S bundle exec rspec --drb'
-
-# go
-alias gd='fdd $GOPATH'
-alias fd='fdd $HOME'
 
 # public ip
 alias ipub='dig +short myip.opendns.com @resolver1.opendns.com'

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git clone https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+brew install fzf
+/usr/local/opt/fzf/install

@@ -1,5 +1,6 @@
 source $HOME/.bashrc
 source $HOME/.aliases
+source $HOME/.fzf.bash
 
 # determined using (the slowish): brew --prefix
 if [ -f $BREW_PATH/etc/bash_completion ]; then
@@ -33,37 +34,6 @@ source $BREW_PATH/share/chruby/auto.sh
 
 # Set GREP highlight color to red
 export GREP_COLOR='1;31'
-
-# Fuzzy
-export FZF_DEFAULT_COMMAND="find * -path '*/\\.*' -prune -o -path '*\/node_modules\/*' -prune -o -type f -print -o -type l -print 2> /dev/null"
-export FZF_DEFAULT_OPTS="--sort 1000000000"
-
-# fe [FUZZY PATTERN] - Open the selected file with the default editor
-#   - Bypass fuzzy finder if there's only one match (--select-1)
-#   - Exit if there's no match (--exit-0)
-fe() {
-  local file
-  file=$(fzf --query="$1" --select-1 --exit-0)
-  [ -n "$file" ] && ${EDITOR:-vim} "$file"
-}
-
-# fd - cd to selected directory
-fdd() {
-  local dir
-  dir=$(find ${1:-*} -path '*/\.*' -prune \
-                  -o -type d -print 2> /dev/null | fzf +m) &&
-  cd "$dir"
-}
-
-# fh - repeat history
-fh() {
-  eval $(([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s | sed 's/ *[0-9]* *//')
-}
-
-# fkill - kill process
-fkill() {
-  ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
-}
 
 # The various escape codes that we can use to color our prompt.
         RED="\[\033[0;31m\]"
