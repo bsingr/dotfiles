@@ -1,23 +1,12 @@
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 18, function()
+-- no 0 = keycode 29
+-- http://macbiblioblog.blogspot.de/2014/12/key-codes-for-function-and-special-keys.html
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 29, function()
   hs.mjomatic.go({
-    "CCi",
-    "AAM",
+    "CCAA",
+    "CCAA",
+    "TTAA",
     "",
     "C Google Chrome",
-    "i iTerm",
-    "M Mail",
-    "A Atom"})
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 19, function()
-  hs.mjomatic.go({
-    "CCCCCCCCCCCCCCCCCCCCCCCC",
-    "CCCCCCCCCCCCCCCCCCCCCCCC",
-    "CCCCCCCCCCCCCCCCCCCCCCCC",
-    "AAAAAAAAAAAAAMMMMMMMMMMM",
-    "AAAAAAAAAAAAAMMMMMMMMMMM",
-    "",
-    "C Google Chrome",
-    "M Mail",
+    "T iTerm2",
     "A Atom"})
 end)

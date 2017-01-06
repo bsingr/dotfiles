@@ -1,15 +1,21 @@
+-- no 1 = keycode 18
+-- http://macbiblioblog.blogspot.de/2014/12/key-codes-for-function-and-special-keys.html
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 18, function()
   local win = hs.window.focusedWindow()
   local screen = hs.screen.allScreens()[1]
   win:move(screen:frame(), screen)
 end)
 
+-- no 2 = keycode 19
+-- http://macbiblioblog.blogspot.de/2014/12/key-codes-for-function-and-special-keys.html
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 19, function()
   local win = hs.window.focusedWindow()
   local screen = hs.screen.allScreens()[2]
   win:move(screen:frame(), screen)
 end)
 
+-- no 3 = keycode 20
+-- http://macbiblioblog.blogspot.de/2014/12/key-codes-for-function-and-special-keys.html
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 20, function()
   local win = hs.window.focusedWindow()
   local screen = hs.screen.allScreens()[3]
