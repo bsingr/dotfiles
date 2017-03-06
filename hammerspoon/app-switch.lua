@@ -6,6 +6,10 @@ hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "T", function()
   hs.application.launchOrFocus("iTerm")
 end)
 
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "S", function()
+  hs.application.launchOrFocus("Slack")
+end)
+
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "E", function()
   hs.application.launchOrFocus("Atom")
 end)
