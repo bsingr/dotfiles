@@ -1,18 +1,28 @@
 source $HOME/.bashrc
 source $HOME/.aliases
-source $HOME/.fzf.bash
+
+# source nvm
+# load time 0.7s - slow!!!
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+
+# source fzf
+# load time 0.02s
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# source chruby
+# load time 0.01s
+source $BREW_PATH/share/chruby/chruby.sh
+source $BREW_PATH/share/chruby/auto.sh
+
+# load direnv
+# load time 0.005s
+eval "$(direnv hook $0)"
 
 # determined using (the slowish): brew --prefix
 if [ -f $BREW_PATH/etc/bash_completion ]; then
   . $BREW_PATH/etc/bash_completion
 fi
-
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-
-export PATH="./vendor/bin:$PATH"
-
-export PATH="$HOME/.local/lib/aws/bin:$PATH"
 
 # development
 export CDPATH="$CDPATH:$HOME/Development"
@@ -24,13 +34,6 @@ export BROWSER=chromium
 # history
 HISTSIZE=1000000
 HISTIGNORE='ls:bg:fg:history'
-
-# load direnv
-eval "$(direnv hook $0)"
-
-# chruby
-source $BREW_PATH/share/chruby/chruby.sh
-source $BREW_PATH/share/chruby/auto.sh
 
 # Set GREP highlight color to red
 export GREP_COLOR='1;31'

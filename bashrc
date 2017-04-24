@@ -6,7 +6,7 @@ PATH=$BREW_PATH/bin:$PATH
 # home
 PATH=$HOME/bin:$PATH
 
-# deploy tools
+# coliquio deploy tools
 PATH=$HOME/Development/deploy-tools:$PATH
 
 # system
@@ -16,8 +16,8 @@ PATH="/usr/local/sbin:$PATH"
 PATH=./bin:$PATH
 
 # php56
-# determined using (the slowish): brew --prefix homebrew/php/php56
-PATH="$BREW_PATH/Cellar/php56/5.6.8/bin:$PATH"
+# determined using (the slowish): $(brew --prefix homebrew/php/php56)
+PATH="/usr/local/opt/php56/bin:$PATH"
 PATH="./vendor/bin:$PATH"
 
 # node / npm
@@ -40,12 +40,12 @@ export JRUBY_OPTS="-X-C"
 
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
+PATH="/usr/local/sbin:$PATH"
+
+# homebrew path
+export PATH="/usr/local/opt/php56/bin:$PATH" # instead of slow $(brew --prefix homebrew/php/php56)
+
+# aws cli
+export PATH="$HOME/.local/lib/aws/bin:$PATH"
 
 export PATH
-
-
-# Source nvm
-export NVM_DIR="/Users/bsingr/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
