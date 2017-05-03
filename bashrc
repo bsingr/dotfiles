@@ -1,6 +1,6 @@
 # homebrew
 # determined using (the slowish): brew --prefix
-BREW_PATH=/usr/local
+export BREW_PATH=/usr/local
 PATH=$BREW_PATH/bin:$PATH
 
 # home

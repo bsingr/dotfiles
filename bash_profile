@@ -4,25 +4,21 @@ source $HOME/.aliases
 # source nvm
 # load time 0.7s - slow!!!
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" # load nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # load nvm bash_completion
 
-# source fzf
+# source fzf (written in go)
 # load time 0.02s
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash # go
 
 # source chruby
 # load time 0.01s
 source $BREW_PATH/share/chruby/chruby.sh
 source $BREW_PATH/share/chruby/auto.sh
 
-# load direnv
-# load time 0.005s
+# load direnv (written in go)
+# load time 0.01s
 eval "$(direnv hook $0)"
-
-# determined using (the slowish): brew --prefix
-if [ -f $BREW_PATH/etc/bash_completion ]; then
-  . $BREW_PATH/etc/bash_completion
-fi
 
 # development
 export CDPATH="$CDPATH:$HOME/Development"
@@ -114,6 +110,7 @@ function parse_git_branch {
 }
 
 function parse_node_version {
+  # 0.01s
   NODE_VERSION=`node -v`
   echo "${NODE_VERSION:1}"
 }
