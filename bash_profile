@@ -22,7 +22,7 @@ eval "$(direnv hook $0)"
 
 # load bash-completion
 # load time 0.15s
-# [ -f $BREW_PATH/etc/bash_completion ] && source $BREW_PATH/etc/bash_completion
+[ -f $BREW_PATH/etc/bash_completion ] && source $BREW_PATH/etc/bash_completion
 
 # development
 export CDPATH="$CDPATH:$HOME/Development"
