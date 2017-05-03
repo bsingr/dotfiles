@@ -4,7 +4,7 @@ source $HOME/.aliases
 # source nvm
 # load time 0.7s - slow!!!
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" # load nvm
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use # load nvm, but disable directory switch for performance
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # load nvm bash_completion
 
 # source fzf (written in go)
