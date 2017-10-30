@@ -11,7 +11,7 @@ hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "S", function()
 end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "E", function()
-  hs.application.launchOrFocus("Atom")
+  hs.application.launchOrFocus("Visual Studio Code")
 end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "B", function()
