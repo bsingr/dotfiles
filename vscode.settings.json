@@ -1,0 +1,12 @@
+{
+  "workbench.colorTheme": "Quiet Light",
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.fontFamily": "Consolas, 'Courier New', monospace",
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "all",
+    "editor.acceptSuggestionOnEnter": "off"
+  }
+}
