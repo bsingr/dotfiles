@@ -9,6 +9,9 @@ PATH=$HOME/bin:$PATH
 # coliquio deploy tools
 PATH=$HOME/Development/deploy-tools:$PATH
 
+# visual studio code https://code.visualstudio.com/docs/setup/mac
+PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
 # system
 PATH="/usr/local/sbin:$PATH"
 

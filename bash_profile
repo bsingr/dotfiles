@@ -27,7 +27,7 @@ eval "$(direnv hook $0)"
 # development
 export CDPATH="$CDPATH:$HOME/Development"
 
-export EDITOR=atom
+export EDITOR=code
 export PAGER=less
 export BROWSER=chromium
 
