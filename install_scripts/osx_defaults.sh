@@ -28,7 +28,7 @@ defaults write com.apple.CrashReporter DialogType none
 defaults write com.apple.frameworks.diskimages skip-verify -bool YES
 
 # save dialogs extended on default
-defaults write -g NSNavPanelExpandedStateForSaveMode -bool YES
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool YES
 
 # login screen
 defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo
@@ -39,9 +39,12 @@ defaults write com.apple.finder ShowMountedServersOnDesktop 1
 # enable retina support on non-retina mac
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool YES
 
-# key repeat rates for karabiner/seil
-defaults write -g InitialKeyRepeat -int 10
-defaults write -g KeyRepeat -int 1
+# fast key repeat rates for keyboard
+defaults write com.apple.universalaccess slowKey -int 0 # Disable Slow Keys.
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool FALSE # Disable Press-And-Hold for keys.
+defaults write NSGlobalDomain InitialKeyRepeat -int 10 # Set key repeat triggering delay to even shorter.
+defaults write NSGlobalDomain KeyRepeat -int 3 # Set key repeat rate to even faster.
+echo "This changes are only available after `reboot`"
 
 # enable CUPS on http://localhost:631
 sudo cupsctl WebInterface=yes
