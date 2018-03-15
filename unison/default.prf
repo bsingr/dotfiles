@@ -1,8 +1,0 @@
-## Unison preferences file
-
-## Roots of the synchronization
-root = /Volumes/Photos
-root = /Volumes/PhotosBackup
-
-## Include common settings
-include common
