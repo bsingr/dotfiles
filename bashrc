@@ -52,3 +52,5 @@ export PATH="/usr/local/opt/php56/bin:$PATH" # instead of slow $(brew --prefix h
 export PATH="$HOME/.local/lib/aws/bin:$PATH"
 
 export PATH
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
