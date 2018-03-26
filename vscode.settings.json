@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Quiet Light",
+  "workbench.colorTheme": "zen",
   "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.fontFamily": "Consolas, 'Courier New', monospace",
@@ -8,5 +8,12 @@
     "editor.wordWrap": "on",
     "editor.renderWhitespace": "all",
     "editor.acceptSuggestionOnEnter": "off"
-  }
+  },
+  "editor.renderWhitespace": "all",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.minimap.enabled": false,
+  "editor.scrollBeyondLastLine": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 0
 }
