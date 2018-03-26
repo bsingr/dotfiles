@@ -21,8 +21,5 @@ alias e='$EDITOR'
 alias be='bundle exec'
 alias bu='bundle update'
 
-# js
-alias y='yarn'
-
 # public ip
 alias ipub='dig +short myip.opendns.com @resolver1.opendns.com'
