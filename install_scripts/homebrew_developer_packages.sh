@@ -7,3 +7,7 @@ brew install nvm \
   chruby \
   bash-completion \
   direnv
+
+# developer font for vscode
+brew tap caskroom/fonts
+brew cask install font-fira-code
