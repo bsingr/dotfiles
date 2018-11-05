@@ -2,7 +2,8 @@
   "workbench.colorTheme": "zen",
   "editor.fontSize": 14,
   "editor.tabSize": 2,
-  "editor.fontFamily": "Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
   "[markdown]": {
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
@@ -15,5 +16,9 @@
   "editor.scrollBeyondLastLine": false,
   "workbench.iconTheme": "material-icon-theme",
   "explorer.confirmDragAndDrop": false,
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "editor.renderControlCharacters": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "extensions.ignoreRecommendations": true,
+  "workbench.startupEditor": "newUntitledFile"
 }
