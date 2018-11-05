@@ -3,6 +3,13 @@
 [user]
   name = Jens Bissinger
   email = mail@jens-bissinger.de
+[sendemail]
+  # allow less-secure apps first before sending here: https://myaccount.google.com/security
+  smtpserver = smtp.gmail.com
+  smtpserverport = 587 
+  smtpencryption = tls
+  smtpuser = whiterabbit.init@gmail.com 
+  chainreplyto = false
 [color]
   branch = auto
   diff = auto
