@@ -28,3 +28,19 @@ hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "F", function()
   local win = hs.window.focusedWindow()
   win:toggleFullScreen()
 end)
+
+-- cycle through all windows of the current application
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "space", function()
+  local app = hs.application.frontmostApplication()
+  local current = 1
+  local next = current
+  for i, window in pairs(app:allWindows()) do
+    if app:focusedWindow() == app:allWindows()[i] then
+      current = i
+    end
+    if i > current then
+      next = i
+    end
+  end
+  app:allWindows()[next]:focus()
+end)

@@ -1,5 +1,6 @@
 # git
 alias gitx='gittower'
+alias git-purge-remote="git branch -r --merged | grep -v master | sed 's/origin\///' | xargs -n 1 git push --delete origin"
 
 # commands
 alias ll='ls -laFG'
@@ -21,8 +22,6 @@ alias e='$EDITOR'
 alias be='bundle exec'
 alias bu='bundle update'
 
-# js
-alias y='yarn'
-
 # public ip
 alias ipub='dig +short myip.opendns.com @resolver1.opendns.com'
+

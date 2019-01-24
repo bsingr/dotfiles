@@ -54,3 +54,8 @@ export PATH="$HOME/.local/lib/aws/bin:$PATH"
 export PATH
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+
+# added by travis gem
+[ -f /Users/bsingr/.travis/travis.sh ] && source /Users/bsingr/.travis/travis.sh
