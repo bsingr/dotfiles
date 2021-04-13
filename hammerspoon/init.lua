@@ -10,24 +10,6 @@ hs.window.animationDuration = 0
 HYPER_KEY = {"cmd", "alt", "ctrl", "shift"}
 
 --
--- expand/collapse active iTerm pane
---
-
-local function pressFn(mods, key)
-  if key == nil then
-    key = mods
-    mods = {}
-  end
-  return function() hs.eventtap.keyStroke(mods, key, 1000) end
-end
-
-local function remap(mods, key, pressFn)
-  hs.hotkey.bind(mods, key, pressFn, nil, pressFn)
-end
-
-remap(HYPER_KEY, "delete", pressFn({"cmd", "shift"}, "Return"))
-
---
 -- window expand
 --
 hs.hotkey.bind(HYPER_KEY, "Return", function()
