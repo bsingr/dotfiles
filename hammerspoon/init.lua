@@ -4,12 +4,10 @@
 -- (c) 2014-2021 bsingr
 --
 
---
--- setup defaults
---
-
 -- disable slowish animations
 hs.window.animationDuration = 0
+
+HYPER_KEY = {"cmd", "alt", "ctrl", "shift"}
 
 --
 -- expand/collapse active iTerm pane
@@ -27,30 +25,22 @@ local function remap(mods, key, pressFn)
   hs.hotkey.bind(mods, key, pressFn, nil, pressFn)
 end
 
-remap({"cmd", "alt", "ctrl", "shift"}, "delete", pressFn({"cmd", "shift"}, "Return"))
+remap(HYPER_KEY, "delete", pressFn({"cmd", "shift"}, "Return"))
 
 --
 -- window expand
 --
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Return", function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local max = win:screen():frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w
-  f.h = max.h
-  win:setFrame(f)
+hs.hotkey.bind(HYPER_KEY, "Return", function()
+  hs.window.focusedWindow():setFrame(hs.window.focusedWindow():screen():frame())
 end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "F", function()
+hs.hotkey.bind(HYPER_KEY, "F", function()
   hs.window.focusedWindow():toggleFullScreen()
 end)
 
+--
 -- cycle through all windows of the current application
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "space", function()
+--
+hs.hotkey.bind(HYPER_KEY, "space", function()
   local app = hs.application.frontmostApplication()
   local current = 1
   local next = current
@@ -68,106 +58,63 @@ end)
 --
 -- window move screens
 --
-
 -- http://macbiblioblog.blogspot.de/2014/12/key-codes-for-function-and-special-keys.html
 -- no 1 = keycode 18
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 18, function()
+hs.hotkey.bind(HYPER_KEY, 18, function()
   hs.window.focusedWindow():move(hs.screen.allScreens()[1]:frame(), screen)
 end)
 -- no 2 = keycode 19
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 19, function()
+hs.hotkey.bind(HYPER_KEY, 19, function()
   hs.window.focusedWindow():move(hs.screen.allScreens()[2]:frame(), screen)
 end)
 -- no 3 = keycode 20
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 20, function()
+hs.hotkey.bind(HYPER_KEY, 20, function()
   hs.window.focusedWindow():move(hs.screen.allScreens()[3]:frame(), screen)
 end)
 
 --
 -- window move onscreen position
 --
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Up", function()
+hs.hotkey.bind(HYPER_KEY, "Up", function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local max = win:screen():frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w
-  f.h = max.h / 2
+  local f = win:screen():frame()
+  f.h = f.h / 2
   win:setFrame(f)
 end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Down", function()
+hs.hotkey.bind(HYPER_KEY, "Down", function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local max = win:screen():frame()
-
-  f.x = max.x
-  f.y = max.h / 2 + max.y
-  f.w = max.w
-  f.h = max.h / 2
+  local f = win:screen():frame()
+  f.y = f.h / 2 + f.y
+  f.h = f.h / 2
   win:setFrame(f)
 end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Left", function()
+hs.hotkey.bind(HYPER_KEY, "Left", function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local max = win:screen():frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h
+  local f = win:screen():frame()
+  f.w = f.w / 2
   win:setFrame(f)
 end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Right", function()
+hs.hotkey.bind(HYPER_KEY, "Right", function()
   local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local max = win:screen():frame()
-
-  f.x = max.w / 2
-  f.y = max.y
-  f.w = max.w / 2
-  f.h = max.h
+  local f = win:screen():frame()
+  f.x = f.w / 2
+  f.w = f.w / 2
   win:setFrame(f)
 end)
 
 --
 -- application switcher
 --
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "G", function()
-  hs.application.launchOrFocus("Tower")
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "T", function()
-  hs.application.launchOrFocus("iTerm")
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "C", function()
-  hs.application.launchOrFocus("Microsoft Teams")
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "X", function()
-  hs.application.launchOrFocus("Xcode")
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "E", function()
-  hs.application.launchOrFocus("Visual Studio Code")
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "B", function()
-  hs.application.launchOrFocus("Google Chrome")
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "N", function()
-  hs.application.launchOrFocus("Messages")
-end)
-
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "M", function()
-  hs.application.launchOrFocus("Mail")
-end)
-
+local function bindAppSwitch(key, appName)
+  hs.hotkey.bind(HYPER_KEY, key, function()
+    hs.application.launchOrFocus(appName)
+  end)  
+end
+bindAppSwitch("G", "Tower")
+bindAppSwitch("T", "iTerm")
+bindAppSwitch("C", "Microsoft Teams")
+bindAppSwitch("X", "Xcode")
+bindAppSwitch("E", "Visual Studio Code")
+bindAppSwitch("B", "Google Chrome")
+bindAppSwitch("N", "Messages")
+bindAppSwitch("M", "Mail")
