@@ -1,15 +1,18 @@
 --
+-- Hammerspoon Config for Hyper-Capslock-Key
+-- (Karabiner-Elements required)
+-- (c) 2014-2021 bsingr
+--
+
+--
 -- setup defaults
 --
 
+-- disable slowish animations
 hs.window.animationDuration = 0
-hs.grid.setMargins("0 0")
-hs.grid.setGrid("6x6")
-hs.grid.ui.textSize = 100
-hs.grid.ui.showExtraKeys = true
 
 --
--- window expand
+-- expand/collapse active iTerm pane
 --
 
 local function pressFn(mods, key)
@@ -26,6 +29,10 @@ end
 
 remap({"cmd", "alt", "ctrl", "shift"}, "delete", pressFn({"cmd", "shift"}, "Return"))
 
+--
+-- window expand
+--
+
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Return", function()
   local win = hs.window.focusedWindow()
   local f = win:frame()
@@ -39,8 +46,7 @@ hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Return", function()
 end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "F", function()
-  local win = hs.window.focusedWindow()
-  win:toggleFullScreen()
+  hs.window.focusedWindow():toggleFullScreen()
 end)
 
 -- cycle through all windows of the current application
@@ -63,35 +69,23 @@ end)
 -- window move screens
 --
 
+-- http://macbiblioblog.blogspot.de/2014/12/key-codes-for-function-and-special-keys.html
 -- no 1 = keycode 18
--- http://macbiblioblog.blogspot.de/2014/12/key-codes-for-function-and-special-keys.html
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 18, function()
-  local win = hs.window.focusedWindow()
-  local screen = hs.screen.allScreens()[1]
-  win:move(screen:frame(), screen)
+  hs.window.focusedWindow():move(hs.screen.allScreens()[1]:frame(), screen)
 end)
-
 -- no 2 = keycode 19
--- http://macbiblioblog.blogspot.de/2014/12/key-codes-for-function-and-special-keys.html
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 19, function()
-  local win = hs.window.focusedWindow()
-  local screen = hs.screen.allScreens()[2]
-  win:move(screen:frame(), screen)
+  hs.window.focusedWindow():move(hs.screen.allScreens()[2]:frame(), screen)
 end)
-
 -- no 3 = keycode 20
--- http://macbiblioblog.blogspot.de/2014/12/key-codes-for-function-and-special-keys.html
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, 20, function()
-  local win = hs.window.focusedWindow()
-  local screen = hs.screen.allScreens()[3]
-  win:move(screen:frame(), screen)
+  hs.window.focusedWindow():move(hs.screen.allScreens()[3]:frame(), screen)
 end)
 
 --
 -- window move onscreen position
 --
-
-
 
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "Up", function()
   local win = hs.window.focusedWindow()
@@ -153,8 +147,8 @@ hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "T", function()
   hs.application.launchOrFocus("iTerm")
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "S", function()
-  hs.application.launchOrFocus("Slack")
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "C", function()
+  hs.application.launchOrFocus("Microsoft Teams")
 end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "X", function()
@@ -177,6 +171,3 @@ hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "M", function()
   hs.application.launchOrFocus("Mail")
 end)
 
-hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "V", function()
-  hs.application.launchOrFocus("BlueJeans")
-end)
