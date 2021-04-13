@@ -68,7 +68,7 @@ bindAppSwitch("N", "Messages")
 bindAppSwitch("M", "Mail")
 
 -- [Use-case] Cycle through all windows of focused application
-hs.hotkey.bind(HYPER_KEY, "space", function()
+hs.hotkey.bind(HYPER_KEY, "delete", function()
   local app = hs.application.frontmostApplication()
   local current = 1
   local next = current
