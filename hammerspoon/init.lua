@@ -68,17 +68,20 @@ bindAppSwitch("N", "Messages")
 bindAppSwitch("M", "Mail")
 
 -- [Use-case] Cycle through all windows of focused application
+-- note: focused window is always at position #1
+hs.hotkey.bind(HYPER_KEY, "space", function()
+  local app = hs.application.frontmostApplication()
+  local max = #app:allWindows()
+  app:allWindows()[max]:focus()
+end)
+
+-- [Use-case] Cycle back 1 window of focused application
+-- note: not easy to implement a proper cycle back all
+-- note: focused window is always at position #1
 hs.hotkey.bind(HYPER_KEY, "delete", function()
   local app = hs.application.frontmostApplication()
-  local current = 1
-  local next = current
-  for i, window in pairs(app:allWindows()) do
-    if app:focusedWindow() == app:allWindows()[i] then
-      current = i
-    end
-    if i > current then
-      next = i
-    end
+  local max = #app:allWindows()
+  if max > 1 then -- only cycle back if more than 1 window available
+    app:allWindows()[2]:focus()
   end
-  app:allWindows()[next]:focus()
 end)
