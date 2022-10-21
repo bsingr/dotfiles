@@ -60,6 +60,8 @@ local function bindAppSwitch(key, appName)
 end
 bindAppSwitch("G", "Tower")
 bindAppSwitch("T", "iTerm")
+bindAppSwitch("R", "Terminal")
+bindAppSwitch("F", "Firefox")
 bindAppSwitch("C", "Microsoft Teams")
 bindAppSwitch("X", "Xcode")
 bindAppSwitch("E", "Visual Studio Code")

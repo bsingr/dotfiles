@@ -1,11 +1,15 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 source $HOME/.bashrc
 source $HOME/.aliases
 
 # source nvm
 # load time 0.7s - slow!!!
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" --no-use # load nvm, but disable directory switch for performance
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" # load nvm, but disable directory switch for performance
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # load nvm bash_completion
+
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 
 # source fzf (written in go)
 # load time 0.02s

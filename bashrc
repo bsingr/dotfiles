@@ -5,6 +5,7 @@ PATH=$BREW_PATH/bin:$PATH
 
 # home
 PATH=$HOME/bin:$PATH
+PATH=$HOME/.local/bin:$PATH
 
 # coliquio deploy tools
 PATH=$HOME/Development/deploy-tools:$PATH
@@ -22,6 +23,8 @@ PATH=./bin:$PATH
 # determined using (the slowish): $(brew --prefix homebrew/php/php56)
 PATH="/usr/local/opt/php56/bin:$PATH"
 PATH="./vendor/bin:$PATH"
+
+export COMPOSER_MEMORY_LIMIT=-1
 
 # node / npm
 export NODE_PATH=/usr/local/lib/node
@@ -55,7 +58,17 @@ export PATH
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-
+TF_PLUGIN_CACHE_DIR=$HOME/.terraform-plugin-cache
 
 # added by travis gem
 [ -f /Users/bsingr/.travis/travis.sh ] && source /Users/bsingr/.travis/travis.sh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/serverless.bash ] && . /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/sls.bash ] && . /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/slss.bash ] && . /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/slss.bash

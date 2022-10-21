@@ -5,7 +5,6 @@ TMPDIR=$(mktemp -d)
 pushd $TMPDIR
 curl -L -o firacode.zip https://github.com/tonsky/FiraCode/releases/download/${VERSION}/FiraCode_${VERSION}``.zip
 unzip firacode.zip
-mkdir -p ~/Library/Fonts
-cp -R ttf/ ~/Library/Fonts/
+open ttf/FiraCode-Regular.ttf
 popd
 rm -rf $TMPDIR
