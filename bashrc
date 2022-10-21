@@ -1,6 +1,6 @@
 # homebrew
 # determined using (the slowish): brew --prefix
-export BREW_PATH=/usr/local
+export BREW_PATH=/opt/homebrew
 PATH=$BREW_PATH/bin:$PATH
 
 # home
@@ -62,13 +62,3 @@ TF_PLUGIN_CACHE_DIR=$HOME/.terraform-plugin-cache
 
 # added by travis gem
 [ -f /Users/bsingr/.travis/travis.sh ] && source /Users/bsingr/.travis/travis.sh
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/serverless.bash ] && . /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/serverless.bash
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/sls.bash ] && . /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/sls.bash
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/slss.bash ] && . /Users/bsingr/Development/team-gallien/credential-service-v2/node_modules/tabtab/.completions/slss.bash
