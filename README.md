@@ -28,6 +28,10 @@ Automated installation of configuration and tools. Supports following applicatio
     git pull
     rake
 
+## Save
+
+    rake iterm_export
+
 # License
 
 See [LICENSE](LICENSE.txt).

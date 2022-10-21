@@ -2,7 +2,7 @@ require 'rake'
 require 'erb'
 
 desc "install the dot files into user's home directory"
-task :install => [:link, :scripts]
+task :install => [:iterm_import, :link, :scripts]
 
 desc "link all files"
 task :link do
@@ -43,6 +43,16 @@ task :scripts do
     puts file
     system "chmod +x ./#{file} && ./#{file}"
   end
+end
+
+desc "install iterm profile"
+task :iterm_import do
+  system "defaults import com.googlecode.iterm2 ~/Development/dotfiles/osx-terminal/iterm2/com.googlecode.iterm2.plist"
+end
+
+desc "install iterm profile"
+task :iterm_export do
+  system "defaults export com.googlecode.iterm2 ~/Development/dotfiles/osx-terminal/iterm2/com.googlecode.iterm2.plist"
 end
 
 def replace_file(file)
