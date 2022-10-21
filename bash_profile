@@ -86,7 +86,7 @@ function parse_git_branch {
 
         # add an else if or two here if you want to get more specific
         # show if we're ahead or behind HEAD
-        remote="="
+        remote="☮"
         if [[ ${git_status} =~ ${remote_pattern} ]]; then
             remote_state="${BASH_REMATCH[1]}"
             remote_idx="${BASH_REMATCH[2]}"
