@@ -86,7 +86,7 @@ function parse_git_branch {
 
         # add an else if or two here if you want to get more specific
         # show if we're ahead or behind HEAD
-        remote=""
+        remote="="
         if [[ ${git_status} =~ ${remote_pattern} ]]; then
             remote_state="${BASH_REMATCH[1]}"
             remote_idx="${BASH_REMATCH[2]}"
@@ -125,7 +125,7 @@ function parse_node_version {
 
 function parse_ruby_version {
   # chruby
-  [ "$RUBY_VERSION" == "" ] && echo 'system' || echo $RUBY_VERSION
+  [ "$RUBY_VERSION" == "" ] && echo 'sys' || echo $RUBY_VERSION
 }
 
 # Return the prompt symbol to use, colorized based on the return value of the
