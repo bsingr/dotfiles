@@ -15,11 +15,9 @@ defaults write com.apple.Dock showhidden -boolean YES
 # dock show itunes title when start playing them
 defaults write com.apple.dock itunes=notifications -bool TRUE
 
-# make dock really small
-defaults write com.apple.dock tilesize -int 32
-
-# dock restart
-killall Dock
+# make dock right size
+defaults write com.apple.dock tilesize -int 48
+killall Dock # restart dck
 
 # no report when app crashes
 defaults write com.apple.CrashReporter DialogType none
